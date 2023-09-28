@@ -1,0 +1,9 @@
+version: "2.0"
+stories:
+- story: golf_general_area
+  steps:
+  - intent: golf_general_area
+    user: |-
+      what is the general area
+  - action: utter_golf_general_area
+  - intent: bot_challenge

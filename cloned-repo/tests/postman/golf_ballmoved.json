@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "1a691dd9-3801-473e-b483-1dc5db3d5fb4",
+		"name": "golf_ball_moved",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/restart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sender\": \"postman\",\n  \"message\": \"/restart\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/webhooks/rest/webhook",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"webhooks",
+						"rest",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ball moved",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Affirm / Deny Butttons\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson[0].buttons).exist;",
+							"  pm.expect(responseJson[0].text).includes(\"Where was the ball\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sender\": \"postman\",\n  \"message\": \"/get_card_number\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/webhooks/rest/webhook",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"webhooks",
+						"rest",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/golf_ballmoved_inform_ball_location{\"ball_location\": \"general_area\"}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Affirm / Deny Butttons\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson[0].buttons).exist;",
+							"  pm.expect(responseJson[0].text).includes(\"Who moved the ball\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sender\": \"postman\",\n  \"message\": \"/deny\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/webhooks/rest/webhook",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"webhooks",
+						"rest",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

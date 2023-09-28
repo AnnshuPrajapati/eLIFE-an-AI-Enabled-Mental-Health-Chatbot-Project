@@ -1,0 +1,5 @@
+rasa~=3.3.0a1
+rasa-sdk~=3.3.0  # if you change this, make sure to change the Dockerfile to match
+paho-mqtt==1.6.1
+click==8.0.4
+-r actions/requirements-actions.txt

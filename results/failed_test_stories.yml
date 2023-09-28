@@ -1,0 +1,8 @@
+version: "3.1"
+stories:
+- story: golf_general_area (.\cloned-repo\jokebot\tests\test_golf.yml)
+  steps:
+  - intent: golf_general_area  # predicted: nlu_fallback: what is the general area
+  - action: utter_golf_general_area  # predicted: action_default_fallback
+  - intent: bot_challenge
+  - action: action_listen  # predicted: utter_iamabot

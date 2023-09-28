@@ -1,0 +1,43 @@
+version: "3.1"
+rules:
+  - rule: answer out of scope
+    steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+  - rule: thank
+    steps:
+    - intent: thankyou
+    - action: utter_welcome
+
+  - rule: say goodbye
+    steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+    - intent: nlu_fallback
+    - action: utter_default
+
+  - rule: f1_score
+    condition:
+    - active_loop: null
+    steps:
+    - intent: f1_score
+    - action: action_f1_score
+
+  - rule: version
+    condition:
+    - active_loop: null
+    steps:
+    - intent: version
+    - action: utter_version
+    - action: action_version
+
+  - rule: show_slots
+    condition:
+    - active_loop: null
+    steps:
+    - intent: show_slots
+    - action: action_show_slots

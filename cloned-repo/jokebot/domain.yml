@@ -1,0 +1,52 @@
+version: "3.1"
+intents:
+  - creed_quote
+  - corny_joke
+  - geek_joke
+  - inspiring_quote
+  - trump_quote
+  - chuck_quote
+  - breaking_quote
+  - ron_quote
+  - kanye_quote
+  - greet
+  - help
+  - goodbye
+  - f1_score
+  - thankyou
+  - version
+  - show_slots
+slots:
+  requested_slot:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: custom
+responses:
+  utter_version:
+  - text: Oct 15, 2022
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that. Type "help" for assistance.
+  utter_goodbye:
+  - text: Goodbye!
+  utter_welcome:
+  - text: You're welcome!
+  utter_default:
+  - text: I didn't quite understand that. Could you rephrase?
+  utter_greet_joke:
+  - text: Hi, welcome to the Jokebot
+  utter_help_joke:
+  - text: You can ask for Geek jokes, Corny jokes. Also, Kanye, Ron Swanson, Creed, Breaking Bad, Inspiring or Trump quotes.
+actions:
+  - action_chuck
+  - action_ron
+  - action_breaking
+  - action_corny
+  - action_inspiring
+  - action_geek
+  - action_trump
+  - action_kanye
+  - action_creed
+  - action_f1_score
+  - action_version
+  - action_show_slots

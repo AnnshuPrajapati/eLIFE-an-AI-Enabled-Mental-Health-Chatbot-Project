@@ -1,0 +1,10 @@
+pytablewriter
+requests
+ruamel.yaml
+# 5.3.0
+#python-socketio==">=4.4,<6"
+# 4.2.0
+#python-engineio==">=4,<6,!=5.0.0"
+aiohttp==3.7.4
+paho-mqtt==1.6.1
+numpy

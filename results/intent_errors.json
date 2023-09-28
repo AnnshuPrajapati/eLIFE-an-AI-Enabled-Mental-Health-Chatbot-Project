@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Am I depressed?",
+    "intent": "faq-5",
+    "intent_prediction": {
+      "name": "depressed",
+      "confidence": 0.4688129127025604
+    }
+  }
+]

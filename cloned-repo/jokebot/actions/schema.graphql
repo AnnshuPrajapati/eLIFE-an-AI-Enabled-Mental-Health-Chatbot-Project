@@ -1,0 +1,2280 @@
+schema {
+  query: query_root
+  mutation: mutation_root
+  subscription: subscription_root
+}
+
+# expression to compare columns of type Boolean. All fields are combined with logical 'AND'.
+input Boolean_comparison_exp {
+  _eq: Boolean
+  _gt: Boolean
+  _gte: Boolean
+  _in: [Boolean!]
+  _is_null: Boolean
+  _lt: Boolean
+  _lte: Boolean
+  _neq: Boolean
+  _nin: [Boolean!]
+}
+
+# columns and relationships of "channel_ids"
+type channel_ids {
+  channel_id: String!
+  channel_name: String!
+  id: Int!
+  user_id: Int!
+}
+
+# aggregated selection of "channel_ids"
+type channel_ids_aggregate {
+  aggregate: channel_ids_aggregate_fields
+  nodes: [channel_ids!]!
+}
+
+# aggregate fields of "channel_ids"
+type channel_ids_aggregate_fields {
+  avg: channel_ids_avg_fields
+  count(columns: [channel_ids_select_column!], distinct: Boolean): Int
+  max: channel_ids_max_fields
+  min: channel_ids_min_fields
+  stddev: channel_ids_stddev_fields
+  stddev_pop: channel_ids_stddev_pop_fields
+  stddev_samp: channel_ids_stddev_samp_fields
+  sum: channel_ids_sum_fields
+  var_pop: channel_ids_var_pop_fields
+  var_samp: channel_ids_var_samp_fields
+  variance: channel_ids_variance_fields
+}
+
+# order by aggregate values of table "channel_ids"
+input channel_ids_aggregate_order_by {
+  avg: channel_ids_avg_order_by
+  count: order_by
+  max: channel_ids_max_order_by
+  min: channel_ids_min_order_by
+  stddev: channel_ids_stddev_order_by
+  stddev_pop: channel_ids_stddev_pop_order_by
+  stddev_samp: channel_ids_stddev_samp_order_by
+  sum: channel_ids_sum_order_by
+  var_pop: channel_ids_var_pop_order_by
+  var_samp: channel_ids_var_samp_order_by
+  variance: channel_ids_variance_order_by
+}
+
+# input type for inserting array relation for remote table "channel_ids"
+input channel_ids_arr_rel_insert_input {
+  data: [channel_ids_insert_input!]!
+  on_conflict: channel_ids_on_conflict
+}
+
+# aggregate avg on columns
+type channel_ids_avg_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by avg() on columns of table "channel_ids"
+input channel_ids_avg_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# Boolean expression to filter rows from the table "channel_ids". All fields are combined with a logical 'AND'.
+input channel_ids_bool_exp {
+  _and: [channel_ids_bool_exp]
+  _not: channel_ids_bool_exp
+  _or: [channel_ids_bool_exp]
+  channel_id: String_comparison_exp
+  channel_name: String_comparison_exp
+  id: Int_comparison_exp
+  user_id: Int_comparison_exp
+}
+
+# unique or primary key constraints on table "channel_ids"
+enum channel_ids_constraint {
+  # unique or primary key constraint
+  channel_ids_channel_id_key
+
+  # unique or primary key constraint
+  channel_ids_pkey
+}
+
+# input type for incrementing integer column in table "channel_ids"
+input channel_ids_inc_input {
+  id: Int
+  user_id: Int
+}
+
+# input type for inserting data into table "channel_ids"
+input channel_ids_insert_input {
+  channel_id: String
+  channel_name: String
+  id: Int
+  user_id: Int
+}
+
+# aggregate max on columns
+type channel_ids_max_fields {
+  channel_id: String
+  channel_name: String
+  id: Int
+  user_id: Int
+}
+
+# order by max() on columns of table "channel_ids"
+input channel_ids_max_order_by {
+  channel_id: order_by
+  channel_name: order_by
+  id: order_by
+  user_id: order_by
+}
+
+# aggregate min on columns
+type channel_ids_min_fields {
+  channel_id: String
+  channel_name: String
+  id: Int
+  user_id: Int
+}
+
+# order by min() on columns of table "channel_ids"
+input channel_ids_min_order_by {
+  channel_id: order_by
+  channel_name: order_by
+  id: order_by
+  user_id: order_by
+}
+
+# response of any mutation on the table "channel_ids"
+type channel_ids_mutation_response {
+  # number of affected rows by the mutation
+  affected_rows: Int!
+
+  # data of the affected rows by the mutation
+  returning: [channel_ids!]!
+}
+
+# input type for inserting object relation for remote table "channel_ids"
+input channel_ids_obj_rel_insert_input {
+  data: channel_ids_insert_input!
+  on_conflict: channel_ids_on_conflict
+}
+
+# on conflict condition type for table "channel_ids"
+input channel_ids_on_conflict {
+  constraint: channel_ids_constraint!
+  update_columns: [channel_ids_update_column!]!
+  where: channel_ids_bool_exp
+}
+
+# ordering options when selecting data from "channel_ids"
+input channel_ids_order_by {
+  channel_id: order_by
+  channel_name: order_by
+  id: order_by
+  user_id: order_by
+}
+
+# primary key columns input for table: "channel_ids"
+input channel_ids_pk_columns_input {
+  id: Int!
+}
+
+# select columns of table "channel_ids"
+enum channel_ids_select_column {
+  # column name
+  channel_id
+
+  # column name
+  channel_name
+
+  # column name
+  id
+
+  # column name
+  user_id
+}
+
+# input type for updating data in table "channel_ids"
+input channel_ids_set_input {
+  channel_id: String
+  channel_name: String
+  id: Int
+  user_id: Int
+}
+
+# aggregate stddev on columns
+type channel_ids_stddev_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by stddev() on columns of table "channel_ids"
+input channel_ids_stddev_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# aggregate stddev_pop on columns
+type channel_ids_stddev_pop_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by stddev_pop() on columns of table "channel_ids"
+input channel_ids_stddev_pop_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# aggregate stddev_samp on columns
+type channel_ids_stddev_samp_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by stddev_samp() on columns of table "channel_ids"
+input channel_ids_stddev_samp_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# aggregate sum on columns
+type channel_ids_sum_fields {
+  id: Int
+  user_id: Int
+}
+
+# order by sum() on columns of table "channel_ids"
+input channel_ids_sum_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# update columns of table "channel_ids"
+enum channel_ids_update_column {
+  # column name
+  channel_id
+
+  # column name
+  channel_name
+
+  # column name
+  id
+
+  # column name
+  user_id
+}
+
+# aggregate var_pop on columns
+type channel_ids_var_pop_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by var_pop() on columns of table "channel_ids"
+input channel_ids_var_pop_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# aggregate var_samp on columns
+type channel_ids_var_samp_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by var_samp() on columns of table "channel_ids"
+input channel_ids_var_samp_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# aggregate variance on columns
+type channel_ids_variance_fields {
+  id: Float
+  user_id: Float
+}
+
+# order by variance() on columns of table "channel_ids"
+input channel_ids_variance_order_by {
+  id: order_by
+  user_id: order_by
+}
+
+# columns and relationships of "device_synonyms"
+type device_synonyms {
+  device_id: Int!
+  id: Int!
+  synonym: String!
+}
+
+# aggregated selection of "device_synonyms"
+type device_synonyms_aggregate {
+  aggregate: device_synonyms_aggregate_fields
+  nodes: [device_synonyms!]!
+}
+
+# aggregate fields of "device_synonyms"
+type device_synonyms_aggregate_fields {
+  avg: device_synonyms_avg_fields
+  count(columns: [device_synonyms_select_column!], distinct: Boolean): Int
+  max: device_synonyms_max_fields
+  min: device_synonyms_min_fields
+  stddev: device_synonyms_stddev_fields
+  stddev_pop: device_synonyms_stddev_pop_fields
+  stddev_samp: device_synonyms_stddev_samp_fields
+  sum: device_synonyms_sum_fields
+  var_pop: device_synonyms_var_pop_fields
+  var_samp: device_synonyms_var_samp_fields
+  variance: device_synonyms_variance_fields
+}
+
+# order by aggregate values of table "device_synonyms"
+input device_synonyms_aggregate_order_by {
+  avg: device_synonyms_avg_order_by
+  count: order_by
+  max: device_synonyms_max_order_by
+  min: device_synonyms_min_order_by
+  stddev: device_synonyms_stddev_order_by
+  stddev_pop: device_synonyms_stddev_pop_order_by
+  stddev_samp: device_synonyms_stddev_samp_order_by
+  sum: device_synonyms_sum_order_by
+  var_pop: device_synonyms_var_pop_order_by
+  var_samp: device_synonyms_var_samp_order_by
+  variance: device_synonyms_variance_order_by
+}
+
+# input type for inserting array relation for remote table "device_synonyms"
+input device_synonyms_arr_rel_insert_input {
+  data: [device_synonyms_insert_input!]!
+  on_conflict: device_synonyms_on_conflict
+}
+
+# aggregate avg on columns
+type device_synonyms_avg_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by avg() on columns of table "device_synonyms"
+input device_synonyms_avg_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# Boolean expression to filter rows from the table "device_synonyms". All fields are combined with a logical 'AND'.
+input device_synonyms_bool_exp {
+  _and: [device_synonyms_bool_exp]
+  _not: device_synonyms_bool_exp
+  _or: [device_synonyms_bool_exp]
+  device_id: Int_comparison_exp
+  id: Int_comparison_exp
+  synonym: String_comparison_exp
+}
+
+# unique or primary key constraints on table "device_synonyms"
+enum device_synonyms_constraint {
+  # unique or primary key constraint
+  device_synonyms_pkey
+}
+
+# input type for incrementing integer column in table "device_synonyms"
+input device_synonyms_inc_input {
+  device_id: Int
+  id: Int
+}
+
+# input type for inserting data into table "device_synonyms"
+input device_synonyms_insert_input {
+  device_id: Int
+  id: Int
+  synonym: String
+}
+
+# aggregate max on columns
+type device_synonyms_max_fields {
+  device_id: Int
+  id: Int
+  synonym: String
+}
+
+# order by max() on columns of table "device_synonyms"
+input device_synonyms_max_order_by {
+  device_id: order_by
+  id: order_by
+  synonym: order_by
+}
+
+# aggregate min on columns
+type device_synonyms_min_fields {
+  device_id: Int
+  id: Int
+  synonym: String
+}
+
+# order by min() on columns of table "device_synonyms"
+input device_synonyms_min_order_by {
+  device_id: order_by
+  id: order_by
+  synonym: order_by
+}
+
+# response of any mutation on the table "device_synonyms"
+type device_synonyms_mutation_response {
+  # number of affected rows by the mutation
+  affected_rows: Int!
+
+  # data of the affected rows by the mutation
+  returning: [device_synonyms!]!
+}
+
+# input type for inserting object relation for remote table "device_synonyms"
+input device_synonyms_obj_rel_insert_input {
+  data: device_synonyms_insert_input!
+  on_conflict: device_synonyms_on_conflict
+}
+
+# on conflict condition type for table "device_synonyms"
+input device_synonyms_on_conflict {
+  constraint: device_synonyms_constraint!
+  update_columns: [device_synonyms_update_column!]!
+  where: device_synonyms_bool_exp
+}
+
+# ordering options when selecting data from "device_synonyms"
+input device_synonyms_order_by {
+  device_id: order_by
+  id: order_by
+  synonym: order_by
+}
+
+# primary key columns input for table: "device_synonyms"
+input device_synonyms_pk_columns_input {
+  id: Int!
+}
+
+# select columns of table "device_synonyms"
+enum device_synonyms_select_column {
+  # column name
+  device_id
+
+  # column name
+  id
+
+  # column name
+  synonym
+}
+
+# input type for updating data in table "device_synonyms"
+input device_synonyms_set_input {
+  device_id: Int
+  id: Int
+  synonym: String
+}
+
+# aggregate stddev on columns
+type device_synonyms_stddev_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by stddev() on columns of table "device_synonyms"
+input device_synonyms_stddev_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# aggregate stddev_pop on columns
+type device_synonyms_stddev_pop_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by stddev_pop() on columns of table "device_synonyms"
+input device_synonyms_stddev_pop_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# aggregate stddev_samp on columns
+type device_synonyms_stddev_samp_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by stddev_samp() on columns of table "device_synonyms"
+input device_synonyms_stddev_samp_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# aggregate sum on columns
+type device_synonyms_sum_fields {
+  device_id: Int
+  id: Int
+}
+
+# order by sum() on columns of table "device_synonyms"
+input device_synonyms_sum_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# update columns of table "device_synonyms"
+enum device_synonyms_update_column {
+  # column name
+  device_id
+
+  # column name
+  id
+
+  # column name
+  synonym
+}
+
+# aggregate var_pop on columns
+type device_synonyms_var_pop_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by var_pop() on columns of table "device_synonyms"
+input device_synonyms_var_pop_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# aggregate var_samp on columns
+type device_synonyms_var_samp_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by var_samp() on columns of table "device_synonyms"
+input device_synonyms_var_samp_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# aggregate variance on columns
+type device_synonyms_variance_fields {
+  device_id: Float
+  id: Float
+}
+
+# order by variance() on columns of table "device_synonyms"
+input device_synonyms_variance_order_by {
+  device_id: order_by
+  id: order_by
+}
+
+# columns and relationships of "devices"
+type devices {
+  cmd_off: String
+  cmd_on: String
+  cmd_toggle: String
+  id: Int!
+  mqtt_format: String!
+  mqtt_id: String!
+  mqtt_server_id: Int!
+  name: String!
+  prefix_cmd: String
+  tasmota: Boolean!
+  user_id: Int!
+}
+
+# aggregated selection of "devices"
+type devices_aggregate {
+  aggregate: devices_aggregate_fields
+  nodes: [devices!]!
+}
+
+# aggregate fields of "devices"
+type devices_aggregate_fields {
+  avg: devices_avg_fields
+  count(columns: [devices_select_column!], distinct: Boolean): Int
+  max: devices_max_fields
+  min: devices_min_fields
+  stddev: devices_stddev_fields
+  stddev_pop: devices_stddev_pop_fields
+  stddev_samp: devices_stddev_samp_fields
+  sum: devices_sum_fields
+  var_pop: devices_var_pop_fields
+  var_samp: devices_var_samp_fields
+  variance: devices_variance_fields
+}
+
+# order by aggregate values of table "devices"
+input devices_aggregate_order_by {
+  avg: devices_avg_order_by
+  count: order_by
+  max: devices_max_order_by
+  min: devices_min_order_by
+  stddev: devices_stddev_order_by
+  stddev_pop: devices_stddev_pop_order_by
+  stddev_samp: devices_stddev_samp_order_by
+  sum: devices_sum_order_by
+  var_pop: devices_var_pop_order_by
+  var_samp: devices_var_samp_order_by
+  variance: devices_variance_order_by
+}
+
+# input type for inserting array relation for remote table "devices"
+input devices_arr_rel_insert_input {
+  data: [devices_insert_input!]!
+  on_conflict: devices_on_conflict
+}
+
+# aggregate avg on columns
+type devices_avg_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by avg() on columns of table "devices"
+input devices_avg_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# Boolean expression to filter rows from the table "devices". All fields are combined with a logical 'AND'.
+input devices_bool_exp {
+  _and: [devices_bool_exp]
+  _not: devices_bool_exp
+  _or: [devices_bool_exp]
+  cmd_off: String_comparison_exp
+  cmd_on: String_comparison_exp
+  cmd_toggle: String_comparison_exp
+  id: Int_comparison_exp
+  mqtt_format: String_comparison_exp
+  mqtt_id: String_comparison_exp
+  mqtt_server_id: Int_comparison_exp
+  name: String_comparison_exp
+  prefix_cmd: String_comparison_exp
+  tasmota: Boolean_comparison_exp
+  user_id: Int_comparison_exp
+}
+
+# unique or primary key constraints on table "devices"
+enum devices_constraint {
+  # unique or primary key constraint
+  devices_pkey
+}
+
+# input type for incrementing integer column in table "devices"
+input devices_inc_input {
+  id: Int
+  mqtt_server_id: Int
+  user_id: Int
+}
+
+# input type for inserting data into table "devices"
+input devices_insert_input {
+  cmd_off: String
+  cmd_on: String
+  cmd_toggle: String
+  id: Int
+  mqtt_format: String
+  mqtt_id: String
+  mqtt_server_id: Int
+  name: String
+  prefix_cmd: String
+  tasmota: Boolean
+  user_id: Int
+}
+
+# aggregate max on columns
+type devices_max_fields {
+  cmd_off: String
+  cmd_on: String
+  cmd_toggle: String
+  id: Int
+  mqtt_format: String
+  mqtt_id: String
+  mqtt_server_id: Int
+  name: String
+  prefix_cmd: String
+  user_id: Int
+}
+
+# order by max() on columns of table "devices"
+input devices_max_order_by {
+  cmd_off: order_by
+  cmd_on: order_by
+  cmd_toggle: order_by
+  id: order_by
+  mqtt_format: order_by
+  mqtt_id: order_by
+  mqtt_server_id: order_by
+  name: order_by
+  prefix_cmd: order_by
+  user_id: order_by
+}
+
+# aggregate min on columns
+type devices_min_fields {
+  cmd_off: String
+  cmd_on: String
+  cmd_toggle: String
+  id: Int
+  mqtt_format: String
+  mqtt_id: String
+  mqtt_server_id: Int
+  name: String
+  prefix_cmd: String
+  user_id: Int
+}
+
+# order by min() on columns of table "devices"
+input devices_min_order_by {
+  cmd_off: order_by
+  cmd_on: order_by
+  cmd_toggle: order_by
+  id: order_by
+  mqtt_format: order_by
+  mqtt_id: order_by
+  mqtt_server_id: order_by
+  name: order_by
+  prefix_cmd: order_by
+  user_id: order_by
+}
+
+# response of any mutation on the table "devices"
+type devices_mutation_response {
+  # number of affected rows by the mutation
+  affected_rows: Int!
+
+  # data of the affected rows by the mutation
+  returning: [devices!]!
+}
+
+# input type for inserting object relation for remote table "devices"
+input devices_obj_rel_insert_input {
+  data: devices_insert_input!
+  on_conflict: devices_on_conflict
+}
+
+# on conflict condition type for table "devices"
+input devices_on_conflict {
+  constraint: devices_constraint!
+  update_columns: [devices_update_column!]!
+  where: devices_bool_exp
+}
+
+# ordering options when selecting data from "devices"
+input devices_order_by {
+  cmd_off: order_by
+  cmd_on: order_by
+  cmd_toggle: order_by
+  id: order_by
+  mqtt_format: order_by
+  mqtt_id: order_by
+  mqtt_server_id: order_by
+  name: order_by
+  prefix_cmd: order_by
+  tasmota: order_by
+  user_id: order_by
+}
+
+# primary key columns input for table: "devices"
+input devices_pk_columns_input {
+  id: Int!
+}
+
+# select columns of table "devices"
+enum devices_select_column {
+  # column name
+  cmd_off
+
+  # column name
+  cmd_on
+
+  # column name
+  cmd_toggle
+
+  # column name
+  id
+
+  # column name
+  mqtt_format
+
+  # column name
+  mqtt_id
+
+  # column name
+  mqtt_server_id
+
+  # column name
+  name
+
+  # column name
+  prefix_cmd
+
+  # column name
+  tasmota
+
+  # column name
+  user_id
+}
+
+# input type for updating data in table "devices"
+input devices_set_input {
+  cmd_off: String
+  cmd_on: String
+  cmd_toggle: String
+  id: Int
+  mqtt_format: String
+  mqtt_id: String
+  mqtt_server_id: Int
+  name: String
+  prefix_cmd: String
+  tasmota: Boolean
+  user_id: Int
+}
+
+# aggregate stddev on columns
+type devices_stddev_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by stddev() on columns of table "devices"
+input devices_stddev_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# aggregate stddev_pop on columns
+type devices_stddev_pop_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by stddev_pop() on columns of table "devices"
+input devices_stddev_pop_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# aggregate stddev_samp on columns
+type devices_stddev_samp_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by stddev_samp() on columns of table "devices"
+input devices_stddev_samp_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# aggregate sum on columns
+type devices_sum_fields {
+  id: Int
+  mqtt_server_id: Int
+  user_id: Int
+}
+
+# order by sum() on columns of table "devices"
+input devices_sum_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# update columns of table "devices"
+enum devices_update_column {
+  # column name
+  cmd_off
+
+  # column name
+  cmd_on
+
+  # column name
+  cmd_toggle
+
+  # column name
+  id
+
+  # column name
+  mqtt_format
+
+  # column name
+  mqtt_id
+
+  # column name
+  mqtt_server_id
+
+  # column name
+  name
+
+  # column name
+  prefix_cmd
+
+  # column name
+  tasmota
+
+  # column name
+  user_id
+}
+
+# aggregate var_pop on columns
+type devices_var_pop_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by var_pop() on columns of table "devices"
+input devices_var_pop_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# aggregate var_samp on columns
+type devices_var_samp_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by var_samp() on columns of table "devices"
+input devices_var_samp_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# aggregate variance on columns
+type devices_variance_fields {
+  id: Float
+  mqtt_server_id: Float
+  user_id: Float
+}
+
+# order by variance() on columns of table "devices"
+input devices_variance_order_by {
+  id: order_by
+  mqtt_server_id: order_by
+  user_id: order_by
+}
+
+# expression to compare columns of type Int. All fields are combined with logical 'AND'.
+input Int_comparison_exp {
+  _eq: Int
+  _gt: Int
+  _gte: Int
+  _in: [Int!]
+  _is_null: Boolean
+  _lt: Int
+  _lte: Int
+  _neq: Int
+  _nin: [Int!]
+}
+
+# columns and relationships of "mqtt_server"
+type mqtt_server {
+  hostname: String!
+  id: Int!
+  password: String
+  port: Int
+  user_id: Int!
+  username: String
+}
+
+# aggregated selection of "mqtt_server"
+type mqtt_server_aggregate {
+  aggregate: mqtt_server_aggregate_fields
+  nodes: [mqtt_server!]!
+}
+
+# aggregate fields of "mqtt_server"
+type mqtt_server_aggregate_fields {
+  avg: mqtt_server_avg_fields
+  count(columns: [mqtt_server_select_column!], distinct: Boolean): Int
+  max: mqtt_server_max_fields
+  min: mqtt_server_min_fields
+  stddev: mqtt_server_stddev_fields
+  stddev_pop: mqtt_server_stddev_pop_fields
+  stddev_samp: mqtt_server_stddev_samp_fields
+  sum: mqtt_server_sum_fields
+  var_pop: mqtt_server_var_pop_fields
+  var_samp: mqtt_server_var_samp_fields
+  variance: mqtt_server_variance_fields
+}
+
+# order by aggregate values of table "mqtt_server"
+input mqtt_server_aggregate_order_by {
+  avg: mqtt_server_avg_order_by
+  count: order_by
+  max: mqtt_server_max_order_by
+  min: mqtt_server_min_order_by
+  stddev: mqtt_server_stddev_order_by
+  stddev_pop: mqtt_server_stddev_pop_order_by
+  stddev_samp: mqtt_server_stddev_samp_order_by
+  sum: mqtt_server_sum_order_by
+  var_pop: mqtt_server_var_pop_order_by
+  var_samp: mqtt_server_var_samp_order_by
+  variance: mqtt_server_variance_order_by
+}
+
+# input type for inserting array relation for remote table "mqtt_server"
+input mqtt_server_arr_rel_insert_input {
+  data: [mqtt_server_insert_input!]!
+  on_conflict: mqtt_server_on_conflict
+}
+
+# aggregate avg on columns
+type mqtt_server_avg_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by avg() on columns of table "mqtt_server"
+input mqtt_server_avg_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# Boolean expression to filter rows from the table "mqtt_server". All fields are combined with a logical 'AND'.
+input mqtt_server_bool_exp {
+  _and: [mqtt_server_bool_exp]
+  _not: mqtt_server_bool_exp
+  _or: [mqtt_server_bool_exp]
+  hostname: String_comparison_exp
+  id: Int_comparison_exp
+  password: String_comparison_exp
+  port: Int_comparison_exp
+  user_id: Int_comparison_exp
+  username: String_comparison_exp
+}
+
+# unique or primary key constraints on table "mqtt_server"
+enum mqtt_server_constraint {
+  # unique or primary key constraint
+  mqtt_server_pkey
+}
+
+# input type for incrementing integer column in table "mqtt_server"
+input mqtt_server_inc_input {
+  id: Int
+  port: Int
+  user_id: Int
+}
+
+# input type for inserting data into table "mqtt_server"
+input mqtt_server_insert_input {
+  hostname: String
+  id: Int
+  password: String
+  port: Int
+  user_id: Int
+  username: String
+}
+
+# aggregate max on columns
+type mqtt_server_max_fields {
+  hostname: String
+  id: Int
+  password: String
+  port: Int
+  user_id: Int
+  username: String
+}
+
+# order by max() on columns of table "mqtt_server"
+input mqtt_server_max_order_by {
+  hostname: order_by
+  id: order_by
+  password: order_by
+  port: order_by
+  user_id: order_by
+  username: order_by
+}
+
+# aggregate min on columns
+type mqtt_server_min_fields {
+  hostname: String
+  id: Int
+  password: String
+  port: Int
+  user_id: Int
+  username: String
+}
+
+# order by min() on columns of table "mqtt_server"
+input mqtt_server_min_order_by {
+  hostname: order_by
+  id: order_by
+  password: order_by
+  port: order_by
+  user_id: order_by
+  username: order_by
+}
+
+# response of any mutation on the table "mqtt_server"
+type mqtt_server_mutation_response {
+  # number of affected rows by the mutation
+  affected_rows: Int!
+
+  # data of the affected rows by the mutation
+  returning: [mqtt_server!]!
+}
+
+# input type for inserting object relation for remote table "mqtt_server"
+input mqtt_server_obj_rel_insert_input {
+  data: mqtt_server_insert_input!
+  on_conflict: mqtt_server_on_conflict
+}
+
+# on conflict condition type for table "mqtt_server"
+input mqtt_server_on_conflict {
+  constraint: mqtt_server_constraint!
+  update_columns: [mqtt_server_update_column!]!
+  where: mqtt_server_bool_exp
+}
+
+# ordering options when selecting data from "mqtt_server"
+input mqtt_server_order_by {
+  hostname: order_by
+  id: order_by
+  password: order_by
+  port: order_by
+  user_id: order_by
+  username: order_by
+}
+
+# primary key columns input for table: "mqtt_server"
+input mqtt_server_pk_columns_input {
+  id: Int!
+}
+
+# select columns of table "mqtt_server"
+enum mqtt_server_select_column {
+  # column name
+  hostname
+
+  # column name
+  id
+
+  # column name
+  password
+
+  # column name
+  port
+
+  # column name
+  user_id
+
+  # column name
+  username
+}
+
+# input type for updating data in table "mqtt_server"
+input mqtt_server_set_input {
+  hostname: String
+  id: Int
+  password: String
+  port: Int
+  user_id: Int
+  username: String
+}
+
+# aggregate stddev on columns
+type mqtt_server_stddev_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by stddev() on columns of table "mqtt_server"
+input mqtt_server_stddev_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# aggregate stddev_pop on columns
+type mqtt_server_stddev_pop_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by stddev_pop() on columns of table "mqtt_server"
+input mqtt_server_stddev_pop_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# aggregate stddev_samp on columns
+type mqtt_server_stddev_samp_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by stddev_samp() on columns of table "mqtt_server"
+input mqtt_server_stddev_samp_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# aggregate sum on columns
+type mqtt_server_sum_fields {
+  id: Int
+  port: Int
+  user_id: Int
+}
+
+# order by sum() on columns of table "mqtt_server"
+input mqtt_server_sum_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# update columns of table "mqtt_server"
+enum mqtt_server_update_column {
+  # column name
+  hostname
+
+  # column name
+  id
+
+  # column name
+  password
+
+  # column name
+  port
+
+  # column name
+  user_id
+
+  # column name
+  username
+}
+
+# aggregate var_pop on columns
+type mqtt_server_var_pop_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by var_pop() on columns of table "mqtt_server"
+input mqtt_server_var_pop_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# aggregate var_samp on columns
+type mqtt_server_var_samp_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by var_samp() on columns of table "mqtt_server"
+input mqtt_server_var_samp_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# aggregate variance on columns
+type mqtt_server_variance_fields {
+  id: Float
+  port: Float
+  user_id: Float
+}
+
+# order by variance() on columns of table "mqtt_server"
+input mqtt_server_variance_order_by {
+  id: order_by
+  port: order_by
+  user_id: order_by
+}
+
+# mutation root
+type mutation_root {
+  # delete data from the table: "channel_ids"
+  delete_channel_ids(
+    # filter the rows which have to be deleted
+    where: channel_ids_bool_exp!
+  ): channel_ids_mutation_response
+
+  # delete single row from the table: "channel_ids"
+  delete_channel_ids_by_pk(id: Int!): channel_ids
+
+  # delete data from the table: "device_synonyms"
+  delete_device_synonyms(
+    # filter the rows which have to be deleted
+    where: device_synonyms_bool_exp!
+  ): device_synonyms_mutation_response
+
+  # delete single row from the table: "device_synonyms"
+  delete_device_synonyms_by_pk(id: Int!): device_synonyms
+
+  # delete data from the table: "devices"
+  delete_devices(
+    # filter the rows which have to be deleted
+    where: devices_bool_exp!
+  ): devices_mutation_response
+
+  # delete single row from the table: "devices"
+  delete_devices_by_pk(id: Int!): devices
+
+  # delete data from the table: "mqtt_server"
+  delete_mqtt_server(
+    # filter the rows which have to be deleted
+    where: mqtt_server_bool_exp!
+  ): mqtt_server_mutation_response
+
+  # delete single row from the table: "mqtt_server"
+  delete_mqtt_server_by_pk(id: Int!): mqtt_server
+
+  # delete data from the table: "users"
+  delete_users(
+    # filter the rows which have to be deleted
+    where: users_bool_exp!
+  ): users_mutation_response
+
+  # delete single row from the table: "users"
+  delete_users_by_pk(id: Int!): users
+
+  # insert data into the table: "channel_ids"
+  insert_channel_ids(
+    # the rows to be inserted
+    objects: [channel_ids_insert_input!]!
+
+    # on conflict condition
+    on_conflict: channel_ids_on_conflict
+  ): channel_ids_mutation_response
+
+  # insert a single row into the table: "channel_ids"
+  insert_channel_ids_one(
+    # the row to be inserted
+    object: channel_ids_insert_input!
+
+    # on conflict condition
+    on_conflict: channel_ids_on_conflict
+  ): channel_ids
+
+  # insert data into the table: "device_synonyms"
+  insert_device_synonyms(
+    # the rows to be inserted
+    objects: [device_synonyms_insert_input!]!
+
+    # on conflict condition
+    on_conflict: device_synonyms_on_conflict
+  ): device_synonyms_mutation_response
+
+  # insert a single row into the table: "device_synonyms"
+  insert_device_synonyms_one(
+    # the row to be inserted
+    object: device_synonyms_insert_input!
+
+    # on conflict condition
+    on_conflict: device_synonyms_on_conflict
+  ): device_synonyms
+
+  # insert data into the table: "devices"
+  insert_devices(
+    # the rows to be inserted
+    objects: [devices_insert_input!]!
+
+    # on conflict condition
+    on_conflict: devices_on_conflict
+  ): devices_mutation_response
+
+  # insert a single row into the table: "devices"
+  insert_devices_one(
+    # the row to be inserted
+    object: devices_insert_input!
+
+    # on conflict condition
+    on_conflict: devices_on_conflict
+  ): devices
+
+  # insert data into the table: "mqtt_server"
+  insert_mqtt_server(
+    # the rows to be inserted
+    objects: [mqtt_server_insert_input!]!
+
+    # on conflict condition
+    on_conflict: mqtt_server_on_conflict
+  ): mqtt_server_mutation_response
+
+  # insert a single row into the table: "mqtt_server"
+  insert_mqtt_server_one(
+    # the row to be inserted
+    object: mqtt_server_insert_input!
+
+    # on conflict condition
+    on_conflict: mqtt_server_on_conflict
+  ): mqtt_server
+
+  # insert data into the table: "users"
+  insert_users(
+    # the rows to be inserted
+    objects: [users_insert_input!]!
+
+    # on conflict condition
+    on_conflict: users_on_conflict
+  ): users_mutation_response
+
+  # insert a single row into the table: "users"
+  insert_users_one(
+    # the row to be inserted
+    object: users_insert_input!
+
+    # on conflict condition
+    on_conflict: users_on_conflict
+  ): users
+
+  # update data of the table: "channel_ids"
+  update_channel_ids(
+    # increments the integer columns with given value of the filtered values
+    _inc: channel_ids_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: channel_ids_set_input
+
+    # filter the rows which have to be updated
+    where: channel_ids_bool_exp!
+  ): channel_ids_mutation_response
+
+  # update single row of the table: "channel_ids"
+  update_channel_ids_by_pk(
+    # increments the integer columns with given value of the filtered values
+    _inc: channel_ids_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: channel_ids_set_input
+    pk_columns: channel_ids_pk_columns_input!
+  ): channel_ids
+
+  # update data of the table: "device_synonyms"
+  update_device_synonyms(
+    # increments the integer columns with given value of the filtered values
+    _inc: device_synonyms_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: device_synonyms_set_input
+
+    # filter the rows which have to be updated
+    where: device_synonyms_bool_exp!
+  ): device_synonyms_mutation_response
+
+  # update single row of the table: "device_synonyms"
+  update_device_synonyms_by_pk(
+    # increments the integer columns with given value of the filtered values
+    _inc: device_synonyms_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: device_synonyms_set_input
+    pk_columns: device_synonyms_pk_columns_input!
+  ): device_synonyms
+
+  # update data of the table: "devices"
+  update_devices(
+    # increments the integer columns with given value of the filtered values
+    _inc: devices_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: devices_set_input
+
+    # filter the rows which have to be updated
+    where: devices_bool_exp!
+  ): devices_mutation_response
+
+  # update single row of the table: "devices"
+  update_devices_by_pk(
+    # increments the integer columns with given value of the filtered values
+    _inc: devices_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: devices_set_input
+    pk_columns: devices_pk_columns_input!
+  ): devices
+
+  # update data of the table: "mqtt_server"
+  update_mqtt_server(
+    # increments the integer columns with given value of the filtered values
+    _inc: mqtt_server_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: mqtt_server_set_input
+
+    # filter the rows which have to be updated
+    where: mqtt_server_bool_exp!
+  ): mqtt_server_mutation_response
+
+  # update single row of the table: "mqtt_server"
+  update_mqtt_server_by_pk(
+    # increments the integer columns with given value of the filtered values
+    _inc: mqtt_server_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: mqtt_server_set_input
+    pk_columns: mqtt_server_pk_columns_input!
+  ): mqtt_server
+
+  # update data of the table: "users"
+  update_users(
+    # increments the integer columns with given value of the filtered values
+    _inc: users_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: users_set_input
+
+    # filter the rows which have to be updated
+    where: users_bool_exp!
+  ): users_mutation_response
+
+  # update single row of the table: "users"
+  update_users_by_pk(
+    # increments the integer columns with given value of the filtered values
+    _inc: users_inc_input
+
+    # sets the columns of the filtered rows to the given values
+    _set: users_set_input
+    pk_columns: users_pk_columns_input!
+  ): users
+}
+
+# column ordering options
+enum order_by {
+  # in the ascending order, nulls last
+  asc
+
+  # in the ascending order, nulls first
+  asc_nulls_first
+
+  # in the ascending order, nulls last
+  asc_nulls_last
+
+  # in the descending order, nulls first
+  desc
+
+  # in the descending order, nulls first
+  desc_nulls_first
+
+  # in the descending order, nulls last
+  desc_nulls_last
+}
+
+# query root
+type query_root {
+  # fetch data from the table: "channel_ids"
+  channel_ids(
+    # distinct select on columns
+    distinct_on: [channel_ids_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [channel_ids_order_by!]
+
+    # filter the rows returned
+    where: channel_ids_bool_exp
+  ): [channel_ids!]!
+
+  # fetch aggregated fields from the table: "channel_ids"
+  channel_ids_aggregate(
+    # distinct select on columns
+    distinct_on: [channel_ids_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [channel_ids_order_by!]
+
+    # filter the rows returned
+    where: channel_ids_bool_exp
+  ): channel_ids_aggregate!
+
+  # fetch data from the table: "channel_ids" using primary key columns
+  channel_ids_by_pk(id: Int!): channel_ids
+
+  # fetch data from the table: "device_synonyms"
+  device_synonyms(
+    # distinct select on columns
+    distinct_on: [device_synonyms_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [device_synonyms_order_by!]
+
+    # filter the rows returned
+    where: device_synonyms_bool_exp
+  ): [device_synonyms!]!
+
+  # fetch aggregated fields from the table: "device_synonyms"
+  device_synonyms_aggregate(
+    # distinct select on columns
+    distinct_on: [device_synonyms_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [device_synonyms_order_by!]
+
+    # filter the rows returned
+    where: device_synonyms_bool_exp
+  ): device_synonyms_aggregate!
+
+  # fetch data from the table: "device_synonyms" using primary key columns
+  device_synonyms_by_pk(id: Int!): device_synonyms
+
+  # fetch data from the table: "devices"
+  devices(
+    # distinct select on columns
+    distinct_on: [devices_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [devices_order_by!]
+
+    # filter the rows returned
+    where: devices_bool_exp
+  ): [devices!]!
+
+  # fetch aggregated fields from the table: "devices"
+  devices_aggregate(
+    # distinct select on columns
+    distinct_on: [devices_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [devices_order_by!]
+
+    # filter the rows returned
+    where: devices_bool_exp
+  ): devices_aggregate!
+
+  # fetch data from the table: "devices" using primary key columns
+  devices_by_pk(id: Int!): devices
+
+  # fetch data from the table: "mqtt_server"
+  mqtt_server(
+    # distinct select on columns
+    distinct_on: [mqtt_server_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [mqtt_server_order_by!]
+
+    # filter the rows returned
+    where: mqtt_server_bool_exp
+  ): [mqtt_server!]!
+
+  # fetch aggregated fields from the table: "mqtt_server"
+  mqtt_server_aggregate(
+    # distinct select on columns
+    distinct_on: [mqtt_server_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [mqtt_server_order_by!]
+
+    # filter the rows returned
+    where: mqtt_server_bool_exp
+  ): mqtt_server_aggregate!
+
+  # fetch data from the table: "mqtt_server" using primary key columns
+  mqtt_server_by_pk(id: Int!): mqtt_server
+
+  # fetch data from the table: "users"
+  users(
+    # distinct select on columns
+    distinct_on: [users_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [users_order_by!]
+
+    # filter the rows returned
+    where: users_bool_exp
+  ): [users!]!
+
+  # fetch aggregated fields from the table: "users"
+  users_aggregate(
+    # distinct select on columns
+    distinct_on: [users_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [users_order_by!]
+
+    # filter the rows returned
+    where: users_bool_exp
+  ): users_aggregate!
+
+  # fetch data from the table: "users" using primary key columns
+  users_by_pk(id: Int!): users
+}
+
+# expression to compare columns of type String. All fields are combined with logical 'AND'.
+input String_comparison_exp {
+  _eq: String
+  _gt: String
+  _gte: String
+  _ilike: String
+  _in: [String!]
+  _is_null: Boolean
+  _like: String
+  _lt: String
+  _lte: String
+  _neq: String
+  _nilike: String
+  _nin: [String!]
+  _nlike: String
+  _nsimilar: String
+  _similar: String
+}
+
+# subscription root
+type subscription_root {
+  # fetch data from the table: "channel_ids"
+  channel_ids(
+    # distinct select on columns
+    distinct_on: [channel_ids_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [channel_ids_order_by!]
+
+    # filter the rows returned
+    where: channel_ids_bool_exp
+  ): [channel_ids!]!
+
+  # fetch aggregated fields from the table: "channel_ids"
+  channel_ids_aggregate(
+    # distinct select on columns
+    distinct_on: [channel_ids_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [channel_ids_order_by!]
+
+    # filter the rows returned
+    where: channel_ids_bool_exp
+  ): channel_ids_aggregate!
+
+  # fetch data from the table: "channel_ids" using primary key columns
+  channel_ids_by_pk(id: Int!): channel_ids
+
+  # fetch data from the table: "device_synonyms"
+  device_synonyms(
+    # distinct select on columns
+    distinct_on: [device_synonyms_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [device_synonyms_order_by!]
+
+    # filter the rows returned
+    where: device_synonyms_bool_exp
+  ): [device_synonyms!]!
+
+  # fetch aggregated fields from the table: "device_synonyms"
+  device_synonyms_aggregate(
+    # distinct select on columns
+    distinct_on: [device_synonyms_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [device_synonyms_order_by!]
+
+    # filter the rows returned
+    where: device_synonyms_bool_exp
+  ): device_synonyms_aggregate!
+
+  # fetch data from the table: "device_synonyms" using primary key columns
+  device_synonyms_by_pk(id: Int!): device_synonyms
+
+  # fetch data from the table: "devices"
+  devices(
+    # distinct select on columns
+    distinct_on: [devices_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [devices_order_by!]
+
+    # filter the rows returned
+    where: devices_bool_exp
+  ): [devices!]!
+
+  # fetch aggregated fields from the table: "devices"
+  devices_aggregate(
+    # distinct select on columns
+    distinct_on: [devices_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [devices_order_by!]
+
+    # filter the rows returned
+    where: devices_bool_exp
+  ): devices_aggregate!
+
+  # fetch data from the table: "devices" using primary key columns
+  devices_by_pk(id: Int!): devices
+
+  # fetch data from the table: "mqtt_server"
+  mqtt_server(
+    # distinct select on columns
+    distinct_on: [mqtt_server_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [mqtt_server_order_by!]
+
+    # filter the rows returned
+    where: mqtt_server_bool_exp
+  ): [mqtt_server!]!
+
+  # fetch aggregated fields from the table: "mqtt_server"
+  mqtt_server_aggregate(
+    # distinct select on columns
+    distinct_on: [mqtt_server_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [mqtt_server_order_by!]
+
+    # filter the rows returned
+    where: mqtt_server_bool_exp
+  ): mqtt_server_aggregate!
+
+  # fetch data from the table: "mqtt_server" using primary key columns
+  mqtt_server_by_pk(id: Int!): mqtt_server
+
+  # fetch data from the table: "users"
+  users(
+    # distinct select on columns
+    distinct_on: [users_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [users_order_by!]
+
+    # filter the rows returned
+    where: users_bool_exp
+  ): [users!]!
+
+  # fetch aggregated fields from the table: "users"
+  users_aggregate(
+    # distinct select on columns
+    distinct_on: [users_select_column!]
+
+    # limit the number of rows returned
+    limit: Int
+
+    # skip the first n rows. Use only with order_by
+    offset: Int
+
+    # sort the rows by one or more columns
+    order_by: [users_order_by!]
+
+    # filter the rows returned
+    where: users_bool_exp
+  ): users_aggregate!
+
+  # fetch data from the table: "users" using primary key columns
+  users_by_pk(id: Int!): users
+}
+
+scalar timestamptz
+
+# expression to compare columns of type timestamptz. All fields are combined with logical 'AND'.
+input timestamptz_comparison_exp {
+  _eq: timestamptz
+  _gt: timestamptz
+  _gte: timestamptz
+  _in: [timestamptz!]
+  _is_null: Boolean
+  _lt: timestamptz
+  _lte: timestamptz
+  _neq: timestamptz
+  _nin: [timestamptz!]
+}
+
+# columns and relationships of "users"
+type users {
+  created_at: timestamptz
+  email: String!
+  id: Int!
+  last_seen: timestamptz
+}
+
+# aggregated selection of "users"
+type users_aggregate {
+  aggregate: users_aggregate_fields
+  nodes: [users!]!
+}
+
+# aggregate fields of "users"
+type users_aggregate_fields {
+  avg: users_avg_fields
+  count(columns: [users_select_column!], distinct: Boolean): Int
+  max: users_max_fields
+  min: users_min_fields
+  stddev: users_stddev_fields
+  stddev_pop: users_stddev_pop_fields
+  stddev_samp: users_stddev_samp_fields
+  sum: users_sum_fields
+  var_pop: users_var_pop_fields
+  var_samp: users_var_samp_fields
+  variance: users_variance_fields
+}
+
+# order by aggregate values of table "users"
+input users_aggregate_order_by {
+  avg: users_avg_order_by
+  count: order_by
+  max: users_max_order_by
+  min: users_min_order_by
+  stddev: users_stddev_order_by
+  stddev_pop: users_stddev_pop_order_by
+  stddev_samp: users_stddev_samp_order_by
+  sum: users_sum_order_by
+  var_pop: users_var_pop_order_by
+  var_samp: users_var_samp_order_by
+  variance: users_variance_order_by
+}
+
+# input type for inserting array relation for remote table "users"
+input users_arr_rel_insert_input {
+  data: [users_insert_input!]!
+  on_conflict: users_on_conflict
+}
+
+# aggregate avg on columns
+type users_avg_fields {
+  id: Float
+}
+
+# order by avg() on columns of table "users"
+input users_avg_order_by {
+  id: order_by
+}
+
+# Boolean expression to filter rows from the table "users". All fields are combined with a logical 'AND'.
+input users_bool_exp {
+  _and: [users_bool_exp]
+  _not: users_bool_exp
+  _or: [users_bool_exp]
+  created_at: timestamptz_comparison_exp
+  email: String_comparison_exp
+  id: Int_comparison_exp
+  last_seen: timestamptz_comparison_exp
+}
+
+# unique or primary key constraints on table "users"
+enum users_constraint {
+  # unique or primary key constraint
+  users_email_key
+
+  # unique or primary key constraint
+  users_pkey
+}
+
+# input type for incrementing integer column in table "users"
+input users_inc_input {
+  id: Int
+}
+
+# input type for inserting data into table "users"
+input users_insert_input {
+  created_at: timestamptz
+  email: String
+  id: Int
+  last_seen: timestamptz
+}
+
+# aggregate max on columns
+type users_max_fields {
+  created_at: timestamptz
+  email: String
+  id: Int
+  last_seen: timestamptz
+}
+
+# order by max() on columns of table "users"
+input users_max_order_by {
+  created_at: order_by
+  email: order_by
+  id: order_by
+  last_seen: order_by
+}
+
+# aggregate min on columns
+type users_min_fields {
+  created_at: timestamptz
+  email: String
+  id: Int
+  last_seen: timestamptz
+}
+
+# order by min() on columns of table "users"
+input users_min_order_by {
+  created_at: order_by
+  email: order_by
+  id: order_by
+  last_seen: order_by
+}
+
+# response of any mutation on the table "users"
+type users_mutation_response {
+  # number of affected rows by the mutation
+  affected_rows: Int!
+
+  # data of the affected rows by the mutation
+  returning: [users!]!
+}
+
+# input type for inserting object relation for remote table "users"
+input users_obj_rel_insert_input {
+  data: users_insert_input!
+  on_conflict: users_on_conflict
+}
+
+# on conflict condition type for table "users"
+input users_on_conflict {
+  constraint: users_constraint!
+  update_columns: [users_update_column!]!
+  where: users_bool_exp
+}
+
+# ordering options when selecting data from "users"
+input users_order_by {
+  created_at: order_by
+  email: order_by
+  id: order_by
+  last_seen: order_by
+}
+
+# primary key columns input for table: "users"
+input users_pk_columns_input {
+  id: Int!
+}
+
+# select columns of table "users"
+enum users_select_column {
+  # column name
+  created_at
+
+  # column name
+  email
+
+  # column name
+  id
+
+  # column name
+  last_seen
+}
+
+# input type for updating data in table "users"
+input users_set_input {
+  created_at: timestamptz
+  email: String
+  id: Int
+  last_seen: timestamptz
+}
+
+# aggregate stddev on columns
+type users_stddev_fields {
+  id: Float
+}
+
+# order by stddev() on columns of table "users"
+input users_stddev_order_by {
+  id: order_by
+}
+
+# aggregate stddev_pop on columns
+type users_stddev_pop_fields {
+  id: Float
+}
+
+# order by stddev_pop() on columns of table "users"
+input users_stddev_pop_order_by {
+  id: order_by
+}
+
+# aggregate stddev_samp on columns
+type users_stddev_samp_fields {
+  id: Float
+}
+
+# order by stddev_samp() on columns of table "users"
+input users_stddev_samp_order_by {
+  id: order_by
+}
+
+# aggregate sum on columns
+type users_sum_fields {
+  id: Int
+}
+
+# order by sum() on columns of table "users"
+input users_sum_order_by {
+  id: order_by
+}
+
+# update columns of table "users"
+enum users_update_column {
+  # column name
+  created_at
+
+  # column name
+  email
+
+  # column name
+  id
+
+  # column name
+  last_seen
+}
+
+# aggregate var_pop on columns
+type users_var_pop_fields {
+  id: Float
+}
+
+# order by var_pop() on columns of table "users"
+input users_var_pop_order_by {
+  id: order_by
+}
+
+# aggregate var_samp on columns
+type users_var_samp_fields {
+  id: Float
+}
+
+# order by var_samp() on columns of table "users"
+input users_var_samp_order_by {
+  id: order_by
+}
+
+# aggregate variance on columns
+type users_variance_fields {
+  id: Float
+}
+
+# order by variance() on columns of table "users"
+input users_variance_order_by {
+  id: order_by
+}
+

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  card_balance_1:
+    image: postman/newman_alpine33
+    network_mode: host
+    command: run golf_ballmoved.json
+      -e localhost_env.json
+      -r cli
+      -k
+    volumes:
+      - .:/etc/newman

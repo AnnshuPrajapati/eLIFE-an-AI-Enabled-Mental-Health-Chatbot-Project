@@ -1,0 +1,47 @@
+
+stories:
+- story: welcome and greet
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - action: action_disclaimer
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      tell me what are your unique qualities and what do you offer
+    intent: unique_qualities
+  - action: action_show_image
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+  - action: action_save_conversation_history
+
+- story: greet+unhappy+faq1+stressed+something-else+no_friends+affirm+did that help you+thanks  #7    steps:
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_disclaimer   
+  - intent: mood_unhappy
+  - action: utter_sad
+  - intent: faq-1
+  - action: utter_faq-1
+  - intent: stressed
+  - action: utter_stressed
+  - intent: something-else
+  - action: utter_something-else
+  - intent: no_friends
+  - action: utter_no_friends
+  - intent: affirm
+  - action: utter_affirm
+  - action: utter_did_that_help
+  - intent: thanks
+  - action: utter_thanks
+  - action: action_save_conversation_history
+
+  
+  

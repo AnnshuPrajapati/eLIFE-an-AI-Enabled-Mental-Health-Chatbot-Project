@@ -1,0 +1,113 @@
+version: "3.1"
+nlu:
+- intent: creed_quote
+  examples: |
+    - creed quote
+    - creed joke
+    - give me a creed quote
+    - how about a creed quote
+    - a creed quote
+- intent: corny_joke
+  examples: |
+    - corny joke
+    - give me a corny joke
+    - how about a corny joke
+    - a corny joke
+- intent: geek_joke
+  examples: |
+    - geek joke
+    - give me a geek joke
+    - how about a geek joke
+    - a geek joke
+- intent: inspiring_quote
+  examples: |
+    - inspiring quote
+    - inspiring joke
+    - give me a inspiring quote
+    - how about a inspiring quote
+    - a quote from inspiring
+- intent: trump_quote
+  examples: |
+    - trump quote
+    - trump joke
+    - give me a trump quote
+    - how about a trump quote
+    - a quote from trump
+- intent: chuck_quote
+  examples: |
+    - chuck quote
+    - chuck joke
+    - give me a chuck quote
+    - how about a chuck quote
+    - a quote from chuck
+- intent: breaking_quote
+  examples: |
+    - breaking quote
+    - breaking joke
+    - give me a breaking quote
+    - how about a breaking quote
+    - a quote from breaking
+    - breaking bad
+- intent: ron_quote
+  examples: |
+    - ron quote
+    - ron joke
+    - give me a ron quote
+    - how about a ron quote
+    - a quote from ron
+    - ron swanson quote
+    - i want a swanson quote
+- intent: kanye_quote
+  examples: |
+    - kanye quote
+    - kanye joke
+    - give me a kanye quote
+    - how about a kanye quote
+    - a quote from kanye
+- synonym: ron
+  examples: |
+    - ron swanson
+    - Ron Swanson
+    - swanson
+    - Ron
+    - parks and recreation
+    - parks and rec
+- synonym: breaking
+  examples: |
+    - breaking bad
+    - heisenberg
+    - walter
+    - walter white
+- synonym: inspiring
+  examples: |
+    - inspriational
+    - inspirational
+    - inspire
+    - up lifting
+    - uplifting
+- synonym: trump
+  examples: |
+    - donald trump
+    - donald
+    - trumpism
+- synonym: chuck
+  examples: |
+    - Chuck
+    - Chuck Norris
+    - chuck norris
+    - norris
+    - Norris
+- synonym: corny
+  examples: |
+    - Corny
+- synonym: geek
+  examples: |
+    - geeky
+    - technology
+    - tech
+- synonym: creed
+  examples: |
+    - Creed
+    - creed bratton
+    - bratton
+    - Bratton
