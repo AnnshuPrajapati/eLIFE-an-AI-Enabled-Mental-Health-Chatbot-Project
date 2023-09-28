@@ -1,3 +1,2 @@
-# eLIFE-an-AI-Enabled-Mental-Health-Chatbot-Project
-Designed and developed the chatbot, an advanced mental health chatbot utilizing RASA Version 3.1 architecture integrating AI, ML, and NLP for personalized mental health support.Provides self-help techniques, mental health information, and access to certified psychiatrists, fostering a safe user environment. Aiming to promote mental well-being through accessible technology.
-
+# -eLIFE-bot-The-AI-enabled-Chatbot-for-Mental-health
+We have designed eLIFE bot which is an innovative mental health chatbot that combine technology and customized features to provide individuals with personalized and efficient mental  health care. With unique capabilities such as gratitude logging, empathetic responses, sentiment  analysis, and a comprehensive database of qualified psychiatrists.

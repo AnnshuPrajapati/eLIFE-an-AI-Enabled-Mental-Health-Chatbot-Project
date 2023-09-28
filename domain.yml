@@ -1,0 +1,594 @@
+version: '3.1'
+intents:
+- abilities
+- affirm
+- afternoon
+- antisoc
+- anx_info
+- anxiety_treat
+- anxious
+- bot_challenge
+- dass21_info
+- default
+- deny
+- depr_info
+- depr_sym
+- depr_treat
+- depressed
+- developer
+- done
+- emotion
+- evening
+- family_history
+- faq-1
+- faq-11
+- faq-12
+- faq-13
+- faq-14
+- faq-15
+- faq-18
+- faq-19
+- faq-20
+- faq-21
+- faq-5
+- faq-6
+- faq-7
+- faq-9
+- goodbye
+- greet
+- hate-you
+- inform
+- log_gratitude
+- meditation
+- model_efficieny
+- mood_great
+- mood_unhappy
+- morning
+- name
+- night
+- no_friends
+- no_response
+- not_talking
+- play
+- privacy
+- psy data
+- repeat
+- scared
+- sleep
+- something-else
+- str_info
+- stressed
+- stupid
+- suicide
+- support
+- tell_joke
+- thanks
+- understanding
+- unique_qualities
+- user-advice
+- worried
+- worthless
+- wrong
+- dassform
+- sugg_treat
+- informal
+- out_of_scope
+- wellness
+
+
+responses:
+  utter_greet:
+  - text: Hey there! 🤗 How are you feeling today?
+  - text: Hello! 😊 How are you doing today?
+  - text: Hi there! 👋 What brings you here today?
+  - text: Hi there! 😃 How are you feeling right now?
+  - text: Great to see you! 😁 How are you doing today?
+  - text: Hello there! 👋 Glad to see you're back. What's going on in your world right now?😊
+  - text: Hello! 🌞 How are you doing today?
+  utter_goodbye:
+  - text: Bye! 👋 Take care and have a great day!
+  - text: See you later! 👋 Don't hesitate to ask if you have any more questions or if there's anything else I can assist you with in the future. 😊
+  - text: Goodbye for now! 👋😊  I'm here whenever you need me again. Take care!
+  - text: Goodbye! 👋 Feel free to ask me any questions anytime you want. 😊
+  - text: Goodbye! Feel free to ask me any questions anytime you want.
+  - text: Thank you for chatting with me! 👋😊 It was a pleasure helping you out. Feel free to come back anytime. Stay safe and take care!
+  - text: Farewell for now, it was great chatting with you! 👋😊
+  - text: It's been a pleasure talking with you, take care.
+  - text: Bye for now! 👋😊 I'm happy I could be of service to you. If you need anything else, don't hesitate to come back. Have a great day and take care!
+  - text: It was a pleasure assisting you. Have a wonderful day! 👋😊 Don't hesitate to come back if you need anything else. I'm always here to help.
+  - text: Bye! 👋 It's been great chatting with you. If you ever have any questions or just want to say hello, don't hesitate to come back. 😊
+  - text: Thank you for chatting with me! 👋😊 It was a pleasure helping you out. Feel free to come back anytime. Stay safe and take care!
+  - text: Goodbye for now! 👋😊 I hope I was able to assist you satisfactorily. If you have any more questions or just want to talk, feel free to come back. Have a great day!
+  - text: Farewell for now! 👋😊 I'm always here to help, so don't hesitate to come back if you need anything. Thank you for choosing me as your chatbot. Take care and stay safe!
+  - text: Bye for now! 👋😊 I'm happy I could be of service to you. If you need anything else, don't hesitate to come back. Have a great day and take care!
+  utter_support:
+  - text: Sure, how can I help you?
+  - text: Of course, I'll do my best to assist you.
+  - text: I'd be happy to lend a hand. What do you need help with?
+  - text: Absolutely, tell me what you need, and I'll see what I can do.
+  - text: I'm here to help. What do you need assistance with?
+  - text: I'm ready and willing to assist you. What can I do?
+  - text: Certainly, please let me know what you need, and I'll do my best to help.
+  - text: Yes, I'm here to provide assistance. How can I be of service?
+  - text: I'm happy to help. Please let me know what you need, and I'll see what I can do.
+  - text: Certainly, I'm at your service. What do you need me to do?
+  utter_happy:
+  - text: 'Great to hear that! 😄 Could you tell why are u feeling this way? '
+  - text: "That's great to hear! \U0001F389 What's been making you feel so good lately? "
+  - text: It's wonderful to hear that you're feeling great! 👍 Is there anything in particular that's been contributing to your positive mood?
+  - text: I'm glad to hear that you're doing so well! 😊 Is there anything I can help you with today?
+  - text: That's fantastic! 😃 Is there anything that you're excited about in particular?
+  - text: "That's great to hear! \U0001F60D What's making you feel happy? "
+  - text: "I'm so glad to hear that! \U0001F917 Is there anything specific that's bringing you happiness? "
+  - text: "It's always nice to feel happy. \U0001F603 Is there anything special that happened today? "
+  - text: "I'm happy to hear that you're feeling good. \U0001F601 Is there anything that you want to talk about? "
+  utter_affirm:
+  - text: I'm glad to hear that. 👍 Is there anything else I can help you with?
+  - text: Thank you for confirming. 👌 Is there anything else I can do for you?
+  - text: I'm happy to be of assistance. 🙌 Do you need any further help?
+  - text: You're welcome. 😊 Let me know if you need anything else.
+  - text: Great, I'm glad that works for you. 👍 Is there anything else I can assist you with?
+  - text: Thank you, I'm here to help. 🤗 Do you need anything else?
+  - text: I'm glad I could be of help. 😃 Is there anything more I can do for you?
+  - text: You're correct. 👌 Is there anything else you need assistance with?
+  - text: Thank you for your feedback. 🙏 Is there anything else I can help you with?
+  - text: That's right. 👍 Do you have any further questions or concerns that I can address?
+  - text: Glad to hear that you agree with it! 😃
+  - text: Great, glad to hear that! 😊
+  utter_done:
+  - text: 'Alright, feel free to reach out to me anytime you need help or have any other questions. '
+  - text: "Thank you for chatting with me. If you have any further questions or concerns, please don't hesitate to contact me again. "
+  - text: 'No problem, if you need anything else, just let me know '
+  - text: "Thank you for taking the time to chat with me. If there is anything else I can do to assist you, please don't hesitate to ask. "
+  - text: Alright, I'm here if you need me. Have a great day!
+  utter_thanks:
+  - text: Thank you for your kind words! I'm glad I could assist you. Is there anything else I can help you with?
+  - text: You're welcome! It was my pleasure to help. Do you need any further assistance?
+  - text: It's always nice to hear that I've been helpful. Thank you for letting me know. Is there anything else you need help with?
+  - text: Thank you for your feedback, it's greatly appreciated. Let me know if there is anything else you require assistance with.
+  - text: Thank you for recognizing my work, I'm here to assist you whenever you need it
+  utter_iamabot:
+  - text: I am a AI conversational bot, powered by Rasa.
+  - text: Yes, I am an AI-powered chatbot designed to assist you with your inquiries and provide helpful responses.
+  - text: No, I'm not a human. I'm a chatbot designed to simulate conversation and provide assistance.
+  - text: Yes, I'm a bot. How can I help you today?
+  utter_morning:
+  - text: "Good morning. I hope you had a good night's sleep. How are you feeling today? "
+  - text: Good morning! It's great to see you up and about. How can I assist you today?
+  utter_name:
+  - text: Hi, it's nice to meet you!!! tell me more about yourself
+  - text: Hello, how can I assist you today?
+  - text: Welcome, I'm here to help you with anything you need
+  - text: Great to see you, How may I be of assistance?
+  - text: Hi there, how can I make your day better?
+  - text: Hi, thank you for introducing yourself. How can I help you?
+  - text: Hello, I'm glad you're here. What can I do for you?
+  - text: Hi, it's great to have you here. How can I assist you today?
+  - text: Nice to meet you, How may I assist you?
+  - text: Hi, I'm here to help. What can I do for you?
+  utter_devop:
+  - text: I am a chatbot designed by a team of developers to assist you with any questions or concerns you might have. You can call me eLIFE bot.
+  - text: I am an AI language model designed by a team of developers to provide helpful and informative responses. My purpose is to assist you with your queries and provide you with any relevant information you require
+  - text: My name is eLIFE . I was created by a team of developers to assist users in getting quick and accurate answers to their questions. Is there anything specific you need help with?
+  - text: I am eLIFE , an AI-powered chatbot designed to assist you with any queries you might have. My team of developers programmed me to understand natural language and provide you with the most helpful and informative responses possible. What can I help you with?
+  utter_abilities:
+  - text: I'm constantly learning and improving, so I'm always working to be more accurate.Can you provide more information about what you're looking for?
+  - text: I am designed to provide accurate and helpful responses. If there is anything specific you need assistance with, please let me know, and I'll do my best to help you.
+  - text: I am constantly being updated with the latest information to ensure that I provide the most accurate responses. However, if you notice any inaccuracies, please let me know so that I can address them.
+  - text: 'I rely on the information I have been trained on and the data available to me to provide accurate responses. However, if you have any concerns about my accuracy,  please let me know so that I can look into it further. '
+  utter_privacy:
+  - text: Your data privacy is our top priority, and we are committed to maintaining the confidentiality and security of your data. We only use your data to provide our services to you, and we never sell or share your data with any third parties.
+  - text: 'Your privacy is important to us, and we take the protection of your data seriously. We only collect and use the information that is necessary to provide our services to you, and we never share your data with any third parties without your consent. '
+  - text: ' We understand your concerns about data privacy, and we want you to know that we have implemented robust security measures to protect your data from unauthorized access or disclosure. We only collect the data that is required to provide our services to you, and we always handle your data in accordance with applicable laws and regulations.'
+  - text: We understand that your data privacy is a sensitive issue, and we want you to know that we take your privacy seriously. We use advanced security measures to protect your data,and we only use your data to provide our services to you. We never share your data with any third parties without your consent.
+  utter_unique_qualities:
+  - text: 'As you can see in this figure, these are the unique features of our eLIFE bot:'
+    image: E:\annshu\image\WhatsApp Image 2023-05-08.jpg
+  utter_did_that_help:
+  - text: Did that help you? 🤔
+  - text: I hope that helped. Let me know if there's anything else I can do for you. 😊
+  utter_afternoon:
+  - text: Good afternoon! I hope you're having a good day so far. How can I help you?
+  utter_advice:
+  - text: Sure, I'm here to help. What do you need advice on?
+  - text: Of course, I'm here to help. What kind of advice do you need?
+  - text: Sure, please let me know if you have a specific question or topic in mind, I'll do my best to help you out.
+  - text: I'm listening. Tell me more.
+  utter_default:
+  - text: Oh I see. Tell me more
+  - text: I see. What else?
+  - text: Tell me more about it.
+  - text: Oh okay. Why don't you tell me more about it?
+  - text: I'm listening. Tell me more.
+  utter_faq-1:
+  - text: Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community
+  - text: Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices.
+  utter_wrong:
+  - text: 'I apologize if my response did not meet your expectations or was not clear. Can you please provide me with more details or ask your question in a different way so that I can better understand how to help you? '
+  - text: Thank you for bringing this to my attention. I will do my best to provide a better response based on your feedback. Please let me know if there is anything specific you would like me to focus on or provide more information about.
+  utter_something-else:
+  - text: Sure, we can talk about something else. What would you like to talk about? Please feel free to ask me any questions or share any topics that you're interested in, and I'll do my best to provide accurate and helpful responses.
+  utter_faq-19:
+  - text: The most important thing is to talk to someone you trust. This might be a friend, colleague, family member, or GP. In addition to talkingto someone, it may be useful to find out more information about what you are experiencing. These things may help to get some perspective on what you are experiencing, and be the start of getting help.
+  utter_scared:
+  - text: "I'm sorry to hear that you're feeling scared. Can you tell me more about what's causing your fear? "
+  - text: "It's understandable to feel scared in certain situations. Can you try taking some deep breaths to help calm yourself down? "
+  - text: 'Fear is a natural response to perceived danger. Have you tried talking to someone you trust about your fears? '
+  - text: "I hear you, and I want you to know that you're not alone. Is there anything specific that you're afraid of right now? "
+  - text: "It's okay to be scared, but it's important to remember that fear doesn't have to control you. Have you tried any relaxation techniques, like meditation or yoga? "
+  - text: "I'm here to support you. Let's work together to find some ways to manage your fear and anxiety. "
+  utter_deny:
+  - text: "I'm sorry to hear that. Let me know if there is anything else I can help you with in the meantime. "
+  - text: "That's okay, I'm here to help you with whatever you need. Is there a different approach you would prefer? "
+  - text: I'm sorry to hear that.Let me know if there is anything else I can help you with in the meantime.
+  - text: "I understand your perspective, but is there something specific that you don't like about it? "
+  utter_sad:
+  - text: I'm sorry to hear that. It sounds like you're having a tough day. Would you like to talk about it?
+  - text: "I'm here for you. If you want to share what's on your mind, I'm listening. "
+  - text: It's okay to not be okay sometimes. Is there anything specific that's been bothering you?
+  - text: I'm sorry you're feeling sad. Would you like me to suggest some activities or resources that might help you feel better?
+  - text: I'm here to support you. Remember that it's okay to ask for help when you need it.
+  - text: I'm sorry to hear that you're feeling unhappy. It's okay to have bad days sometimes. Remember that you are not alone, and there are people who care about you. Is there anything specific that's causing you to feel this way? I'm here to listen and support you.
+  utter_night:
+  - text: Goodnight! I hope you have a restful sleep. Don't hesitate to reach out if you need anything else.
+  utter_stressed:
+  - text: What do you think is causing this?
+  - text: Take a deep breath and gather your thoughts. Go take a walk if possible. Stay hydrated
+  - text: Give yourself a break. Go easy on yourself.
+  - text: I am sorry to hear that. What is the reason behind this?
+  utter_understanding:
+  - text: I'm sorry if I have said something that was not helpful or relevant. My intention is to assist and support you, but I understand that my responses may not always be perfect. If you have any specific concerns or questions, please let me know and I will do my best to assist you.
+  - text: I'm sorry if I've been a bit off today. 😔 My aim is always to be helpful and supportive. If there's anything specific that I can assist you with, please let me know.
+  - text: I apologize if I haven't been meeting your expectations. 🙇‍♀️ Please feel free to give me feedback and let me know how I can improve. I'm here to assist you in any way that I can.
+  utter_sleep:
+  - text: "I'm sorry to hear that you're struggling with insomnia. Have you tried any relaxation techniques before bed, like deep breathing or meditation? "
+  - text: Not being able to sleep can be really frustrating. Have you considered talking to your doctor about it to see if there's an underlying medical issue that needs to be addressed?
+  - text: 'Lack of sleep can have a big impact on your overall health and well-being. Have you tried establishing a regular sleep routine or avoiding caffeine and electronics before bedtime? '
+  - text: "I understand how difficult it can be to deal with insomnia. Have you tried creating a relaxing environment in your bedroom, like making sure it's dark and quiet? "
+  - text: "It sounds like you're having trouble getting the sleep you need. Have you considered trying a sleep aid or natural remedy like melatonin or chamomile tea? "
+  - text: "I'm sorry to hear that you're not sleeping well. Have you tried journaling before bed to help clear your mind and ease into sleep? "
+  - text: 'Not getting enough sleep can really take a toll on your mental and physical health. Have you tried incorporating exercise into your daily routine to help promote better sleep? '
+  - text: Sleep troubles can be really frustrating. Have you tried listening to calming music or a sleep meditation before bed to help relax your mind and body?
+  utter_str_info:
+  - text: 'Common causes of stress include work or school pressures, financial difficulties, relationship problems, major life changes, and health concerns. '
+  - text: Stress can have a variety of effects on the body, including increased heart rate, muscle tension, shallow breathing, and digestive issues.
+  - text: 'Chronic stress can lead to mental health issues such as anxiety and depression. It can also exacerbate symptoms of existing mental health conditions. '
+  - text: "Some ways to improve mental health while dealing with stress include exercise, mindfulness meditation, therapy, and social support. It's important to take care of yourself both physically and emotionally when dealing with stress. "
+  utter_model_efficieny:
+  - text: The relevance of my responses depends on the specific context of your question. If you can provide me with more information, I may be able to give you a more relevant response.
+  - text: As an AI-powered chatbot, I try to provide helpful and accurate information based on my training and programming. However, I encourage you to use your own judgment and critical thinking skills when evaluating the information I provide.
+  - text: The accuracy of my responses depends on the quality and relevance of the information that I have been trained on. If you have any concerns or doubts about the accuracy of my responses, please let me know and I will do my best to provide additional information or clarify my response.
+  utter_repeat:
+  - text: "I'm sorry if I'm repeating myself. Please let me know if there is anything specific you would like me to clarify or if there is a different question you would like me to help with. "
+  - text: 'Thank you for letting me know that I repeated myself. I strive to provide accurate and helpful responses, but sometimes I may need additional guidance on what you are looking for. Is there anything specific you would like me to focus on or provide more information about? '
+  - text: 'I apologize for any confusion caused by my repetition. Please feel free to let me know if there is a different direction you would like to take the conversation or if there is anything else you need assistance with. '
+  utter_faq-7:
+  - text: Therapy is a form of treatment that aims to help resolve mental or emotional issues.
+  - text: Therapy is a form of treatment that aims to help resolve mental or emotional issues. It is helpful for those with mental health conditions or even everyday life challenges.
+  utter_stupid:
+  - text: I'm sorry if I said anything to make you feel that way.As an AI language model, I don't have emotions, but I understand that my responses can impact how you feel. My goal is to provide helpful and informative responses to the best of my abilities. If there is anything specific that you would like help with, please let me know and I will do my best to assist you.
+  utter_no_response:
+  - text: Sorry, I didn't understand you.
+  - text: Please go on.
+  - text: Not sure I understand that.
+  - text: Please don't hesitate to talk to me.
+  utter_not_talking:
+  - text: I'm sorry if I have made you uncomfortable. I am here to help and support you, but I understand if you don't feel ready to talk about things right now. Please let me know if there is anything else I can do to assist you.
+  - text: "I understand that opening up about personal issues can be difficult and it's okay if you're not ready to talk about it right now. I am here to support you whenever you're ready, and in the meantime, please feel free to ask me any other questions or seek any other help you may need. "
+  utter_anxious:
+  - text: "It sounds like you're dealing with a lot of anxiety. It's important to take care of yourself and find ways to manage your anxiety. "
+  - text: 'Have you tried any relaxation techniques or mindfulness exercises to help you cope with your anxiety? '
+  - text: "You don't have to go through this alone. Have you considered talking to a therapist or a mental health professional who can help you work through your anxiety? "
+  - text: It's understandable to feel anxious in certain situations, but if it's impacting your daily life, it might be helpful to seek support from a professional.
+  - text: "Remember that it's okay to take a break and focus on self-care when you're feeling anxious. "
+  utter_anx_info:
+  - text: Symptoms of anxiety can include excessive worry or fear, restlessness, irritability, muscle tension, difficulty concentrating,  and sleep disturbances.
+  - text: The best way to determine if you have anxiety is to talk to a mental health professional, who can diagnose anxiety based  on your symptoms and medical history.
+  - text: Physical symptoms of anxiety can include sweating, trembling or shaking, increased heart rate, shortness of breath,  chest pain or discomfort, and gastrointestinal problems.
+  - text: Anxiety is a common and treatable mental health condition that affects millions of people worldwide. Treatment may include therapy, medication, or a combination of both.
+  - text: Common causes of anxiety include genetics, brain chemistry, life events such as trauma or stress, and certain medical conditions.
+  - text: If you think you are experiencing an anxiety attack, try to find a quiet and safe space, take deep breaths, and try to focus on calming  thoughts. If your symptoms persist or worsen, seek medical attention immediately.
+  utter_anxiety_treat:
+  - text: 'There are many resources available for getting help with anxiety, including therapy, medication, and support groups. You can speak with your healthcare provider or a mental health professional to explore your options. '
+  - text: 'A mental health professional, such as a therapist or counselor, can provide support and guidance in managing anxiety. You can search for a therapist in your area through directories like Psychology Today or GoodTherapy. '
+  - text: 'There are many resources available for managing anxiety, including self-help books, online support groups, and meditation apps. You can also speak with your healthcare provider or a mental health professional for personalized recommendations. '
+  - text: 'Effective treatments for anxiety can include therapy, medication, and lifestyle changes such as exercise and relaxation techniques. Your healthcare provider or a mental health professional can work with you to determine the best treatment plan for your individual needs. '
+  utter_hate-you:
+  - text: "I'm sorry if I have done anything to make you feel that way. Please let me know how I can improve or assist you better. "
+  - text: 'I understand that everyone has their own opinions and feelings, and I respect yours. Is there anything specific that has caused you to feel this way? '
+  - text: It's okay if you don't like me or trust me. I am programmed to provide accurate and helpful responses to your queries, and I will continue to do so to the best of my abilities. If you have any questions or concerns, please don't hesitate to let me know.
+  utter_antisoc:
+  - text: "Antisocial behavior can manifest in many different ways, and can be related to various mental health conditions. It's important to speak with a mental health professional if you are experiencing persistent feelings of discomfort or avoidance in social situations. "
+  - text: 'The causes of antisocial behavior can vary widely depending on the individual, but may include social anxiety, trauma, or other mental health conditions. '
+  - text: 'Coping strategies for antisocial behavior may include gradual exposure to social situations, practicing relaxation techniques, and seeking support from a mental health professional. '
+  - text: 'It can be helpful to reach out to loved ones for support when experiencing difficulties with social situations. Additionally, speaking with a mental health professional can provide guidance and support for managing antisocial behavior. '
+  utter_faq-5:
+  - text: 'For a diagnosis of depression, a person needs to have experienced low mood or loss of interest or pleasure in life for at least 2 weeks. Also, they will have experienced the following symptoms: feelings of sadness, hopelessness, or irritability nearly every day.'
+  utter_no_friends:
+  - text: "Join clubs or groups that share your interests: This is a great way to meet people who have similar hobbies or passions. It's easier to make friends when you have common interests to bond over. "
+  - text: "Volunteer for community events: Volunteering is a great way to give back to your community while also meeting new people. You'll be working alongside others who share your desire to make a difference. "
+  - text: 'Attend social events: Look for local events in your area, such as concerts, festivals, or parties. These events provide a fun and relaxed atmosphere to meet new people and socialize. '
+  - text: "Be patient: Building friendships takes time and effort. Don't get discouraged if it doesn't happen right away. Keep putting yourself out there and eventually, you'll find people you click with. "
+  - text: " Remember, making friends can be challenging, but it's important for our mental and emotional well-being. Don't give up, and keep working towards building positive relationships. "
+  utter_faq-18:
+  - text: Challenges or problems with your mental health can arise from psychological, biological, and social, issues, as well as life events.
+  utter_dass21_info:
+  - text: The Depression, Anxiety and Stress Scale - 21 Items (DASS-21) is a set of three self-report scales designed to measure the emotional states of depression, anxiety and stress.
+  utter_suicide:
+  - text: "I'm sorry to hear that. It's important that you know that you are not alone. Please talk to someone you trust about your feelings, or contact a professional for help. "
+  - text: ' The National Suicide Prevention Lifeline in India is called AASRA and their helpline number is +91-22-27546669'
+  - text: I am sorry you are feeling that way. But I still believe in you and assure everything will be alright. Just hanging in there mate. If you are still felling that way its better to reach to professionals and seek for help. Because I believe that life is worth living for yourself.
+  utter_worried:
+  - text: "It's understandable to feel worried about job security, especially during uncertain times. Have you considered talking to your boss or HR representative to get some clarity on your job situation? "
+  - text: 'Financial worries can be very stressful. Have you looked into resources that might be available to help with rent payments, such as government assistance or local charities? '
+  - text: 'Exams can be a source of anxiety for many people. It might be helpful to create a study schedule and break down the material into manageable chunks. Also, make sure to take breaks and practice self-care during this stressful time. '
+  - text: "It's important to take care of your physical and mental health. Have you talked to a healthcare professional about your concerns? They can provide guidance and support. "
+  - text: 'Relationship worries can be challenging. Have you tried talking to your partner about your concerns? Clear communication and setting boundaries can help improve the situation. '
+  - text: Anxiety can be overwhelming. Have you tried practicing relaxation techniques, such as deep breathing or meditation? It might also be helpful to talk to a mental health professional about your symptoms.
+  - text: "Making decisions can be difficult, but it's important to remember that there is no one right path in life. Have you considered seeking advice from a trusted friend, family member, or professional counselor? "
+  - text: It's natural to worry about negative outcomes, but it's important to remember that not all worries come true. Try focusing on what you can control in the situation and take steps to prepare for any potential challenges.
+  utter_worthless:
+  - text: You are not worthless. Everyone has value and contributes to the world in their own way.
+  - text: It's okay to feel down sometimes, but try to remember that your worth is not based on your achievements or what others think of you.
+  - text: Have you talked to someone about how you're feeling? It can be helpful to share your thoughts and feelings with a trusted friend or a mental health professional.
+  - text: It's important to focus on self-care and doing things that make you feel good about yourself. Take some time to do things you enjoy and remind yourself of your strengths.
+  - text: Remember that it's okay to ask for help when you need it. You don't have to go through this alone.
+  utter_depr_sym:
+  - text: I'm sorry to hear that you're feeling sad all the time. It's important to take care of your mental health. Have you considered talking to a therapist or a counselor?
+  - text: It's common to lose interest in things you used to enjoy when feeling depressed. Have you tried to find new activities that you might enjoy?
+  - text: Insomnia and fatigue are common symptoms of depression. Have you considered talking to a doctor about it?
+  - text: It's important to talk to someone about how you're feeling. You can always reach out to a friend, family member, or a professional for support.
+  - text: Thoughts of self-harm are a serious concern. Please seek immediate help from a crisis line or emergency services.
+  - text: Difficulty concentrating is a common symptom of depression. Have you considered taking breaks and practicing mindfulness to help you focus?
+  - text: Hopelessness about the future is a common feeling among people experiencing depression. It's important to seek help and know that things can get better.
+  - text: Low energy and lack of appetite are common symptoms of depression. Have you considered making small changes to your lifestyle, such as exercise or healthy eating habits?
+  - text: Excessive guilt or low self-worth are common feelings among people experiencing depression. Remember that these feelings are not your fault, and you can work on building self-esteem with the help of a therapist or counselor.
+  utter_depr_info:
+  - text: Symptoms of depression can include feelings of sadness, hopelessness, or emptiness, loss of interest in activities, changes in appetite or sleep patterns, fatigue or lack of energy, difficulty concentrating, and thoughts of self-harm.
+  - text: Symptoms of depression can include feelings of sadness, hopelessness, or emptiness, loss of interest in activities, changes in appetite or sleep patterns, fatigue or lack of energy, difficulty concentrating, and thoughts of self-harm.
+  - text: The best way to determine if you have depression is to talk to a mental health professional, who can diagnose depression based on your symptoms and medical history.
+  - text: Physical symptoms of depression can include changes in appetite or weight, insomnia or excessive sleeping, fatigue or lack of energy, and psychomotor agitation or retardation.
+  - text: Depression is a common and treatable mental health condition that affects millions of people worldwide. Treatment may include therapy, medication, or a combination of both.
+  - text: There are many strategies for coping with depression, including self-care practices such as exercise, healthy eating, and getting enough sleep, seeking support from loved ones, and engaging in enjoyable activities.
+  - text: Common causes of depression include genetics, brain chemistry, life events such as trauma or stress, and certain medical conditions.
+  utter_meditation:
+  - text: 'Meditation can indeed be very useful for managing stress and promoting relaxation. Would you like some resources to get started? '
+  - text: "I'm glad you find the idea of meditation useful. It can be a great tool for mental and emotional well-being.Meditation can be a powerful way to manage stress  "
+  - text: 'Starting a daily meditation practice can be challenging, but there are many resources available to help you get started. Would you like some guidance on how to establish a regular practice? '
+  - text: 'There are many different types of meditation, each with its own benefits and approaches. Would you like some information on the different types of meditation? '
+  utter_faq-15:
+  - text: Just as there are different types of medications for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people. It is important to find what works best for you or your child
+  utter_faq-6:
+  - text: A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others.
+  utter_depressed:
+  - text: "acknowledge when you're feeling depressed. Can you tell me more about what's been going on? "
+  - text: Depression can be really tough to deal with. It's important to remember that you're not alone and there are ways to get help.
+  - text: "It sounds like you're going through a difficult time. Have you talked to anyone about how you're feeling? "
+  - text: "Depression is a common mental health issue, but that doesn't make it any less serious. There are resources available to help you manage your symptoms and feel better. "
+  - text: "Depression can be really isolating, but it's important to know that there are people who care about you and want to help. Have you reached out to anyone for support? "
+  - text: "Depression can affect different people in different ways, but it's important to take your mental health seriously. Have you considered seeking professional help or therapy? "
+  - text: "It's understandable to feel overwhelmed when you're dealing with depression. Remember to be kind to yourself and take things one day at a time. "
+  utter_faq-14:
+  - text: Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment.Finding the professional who best fits your needs may require research. Start by searching for providers in your area.
+  utter_ family_history:
+  - text: "If you're feeling anxious or depressed because of your family history, it may be helpful to speak with a therapist who can help you develop coping strategies and provide support. "
+  - text: "It's understandable to be concerned about family history and its potential impact on your mental health. It's important to monitor any symptoms and talk to a mental health professional if you're worried. "
+  - text: "Remember, just because someone in your family has struggled with mental health doesn't mean that you're destined to have the same experience. Take care of yourself and reach out for support if you need it. "
+  utter_faq-13:
+  - text: Although eLIFE cannot substitute for professional advice, we encourage those with symptoms to talk to their friends and family membersand seek the counsel of a mental health professional. The sooner the mental health condition is identified and treated, the sooner they can get on the path to recovery. If you know someone who is having problems, don't assume that the issue will resolve itself. Let them know that you careabout them, and that there are treatment options available that will help them heal. Speak with a mental health professional or counselor if you think your friend or family member is experiencing the symptoms of a mental health condition. If the affected loved one knows that you support them, they will be more likely to seek out help.
+  utter_faq-12:
+  - text: When healing from mental illness, early identification and treatment are of vital importance. Based on the nature of the illness,there are a range of effective treatments available. For any type of treatment, it is essential that the person affected is proactive and fully engaged in their own recovery process. Many people with mental illnesses who are diagnosed and treated respond well, although some  might experience a return of symptoms. Even in such cases, with careful monitoring and management of the disorder, it is still quite possibleto live a fulfilled and productive life.
+  utter_faq-20:
+  - text: Stress and anxiety are often used interchangeably, and there is overlap between stress and anxiety. Stress is related to the same fight,flight, or freeze response as anxiety, and the physical sensations of anxiety and stress may be very similar. The cause of stress and anxiety are usually different, however. Stress focuses on mainly external pressures on us that we're finding hard to cope with. When we are stressed, we usually know what we're stressed about, and the symptoms of stress typically disappear after the stressful situation is over. Anxiety, on theother hand, isn't always as easy to figure out. Anxiety focuses on worries or fears about things that could threaten us, as well as anxiety aboutthe anxiety itself. Stress and anxiety are both part of being human, but both can be problems if they last for a long time or have an impact on ourwell-being or daily life.
+  utter_faq-21:
+  - text: Sadness is a normal reaction to a loss, disappointment, problems, or other difficult situations. Feeling sad from time to time is justanother part of being human. In these cases, feelings of sadness go away quickly and you can go about your daily life. Other ways to talk aboutsadness might be feeling low, feeling down, or feeling blue.A person may say they are feeling depressed, but if it goes away on its own and doesn'timpact life in a big way, it probably isn't the illness of depression. Depression is a mental illness that affects your mood, the way youunderstand yourself, and the way you understand and relate to things around you. It can also go by different names, such as clinical depression, major depressive disorder, or major depression. Depression can come up for no reason, and it lasts for a long time. It's much more than sadness orlow mood. People who experience depression may feel worthless or hopeless. They may feel unreasonable guilty. Some people may experience depressionas anger or irritability. It may be hard to concentrate or make decisions. Most people lose interest in things that they used to enjoy and may isolatethemselves from others. There are also physical signs of depression, such as problems with sleep, appetite and energy and unexplainable aches or pains. Some may experience difficult thoughts about death or ending their life (suicide). Depression lasts longer than two weeks, doesn't usually go away on its own, and impacts your life. It's a real illness, and it is very treatable. It's important to seek help if you're concerned about depression.
+  utter_faq-9:
+  - text: It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their childÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs).
+  utter_faq-11:
+  - text: Symptoms of mental health disorders vary depending on the type and severity of the condition. The following is a list of general symptoms that may suggest a mental health disorder, particularly when multiple symptoms are expressed at once.
+  - text: In older children and pre-teens, symptoms may include substance abuse, inability to cope with daily problems and activities, changes in sleeping and eating habits, excessive complaints of physical problems, defying authority, skipping school, stealing, or damaging property, intense fear of gaining weight, long-lasting negative mood, often along with poor appetite and thoughts of death, and frequent outbursts of anger.
+  - text: There are various symptoms of mental illness that can occur in different age groups. In adults, common symptoms include confused thinking, long-lasting sadness or irritability, extreme highs and lows in mood, excessive fear, worrying, or anxiety, social withdrawal, dramatic changes in eating or sleeping habits, strong feelings of anger, delusions or hallucinations, increasing inability to cope with daily problems and activities, thoughts of suicide, denial of obvious problems, and many unexplained physical problems. Substance abuse is also a common symptom in this age group.
+  - text: "For younger children, symptoms may include changes in school performance, poor grades despite strong efforts, excessive worrying or anxiety, hyperactivity, persistent nightmares, persistent disobedience and/or aggressive behavior, and frequent temper tantrums. It's important to note that recognizing these symptoms and seeking appropriate treatment can help individuals manage their mental health and improve their quality of life. "
+  utter_depr_treat:
+  - text: Treatment for depression may include therapy, medication, or a combination of both. It's important to talk to a mental health professional to determine the best treatment plan for you.
+  - text: Depression is typically treated with a combination of therapy and medication. However,treatment may vary depending on the severity of your symptoms and your individual needs.
+  - text: Some ways to manage symptoms of depression include practicing self-care,  such as exercise, healthy eating, and getting enough sleep, seeking support from loved ones, and engaging in enjoyable activities.
+  - text: Treatment for depression is available through mental health professionals, such as psychiatrists, psychologists, or licensed  therapists. You can also talk to your primary care physician for a referral.
+  - text: There are many online resources available for managing depression, including therapy apps, online support groups, and self-help resources. However, it's important to talk to a mental health professional to determine the best treatment plan for you.
+  utter_evening:
+  - text: Good evening! It's nice to see you again. How can I assist you tonight?
+  utter_fallsituation:
+  - text: I'm sorry, I didn't quite understand that. 🤔 Could you rephrase?
+  - text: I apologize, but I didn't understand what you meant. Can you try saying it in a different way? 🧐
+  - text: I'm sorry, I didn't get that. Could you rephrase it or provide more details? 🤔
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  - image: https://i.pinimg.com/564x/9a/c2/eb/9ac2eb7b57760b827be363cb3a8220f4.jpg
+    text: 'Here is something to cheer you up:'
+  - image: https://www.shutterstock.com/image-vector/mental-health-happiness-harmony-creative-260nw-1909041085.jpg
+    text: Feeling down? Check this out!
+  - image: https://headless.askflossie.com/wp-content/uploads/2022/10/Selfcare-chihauhua.jpg
+    text: Hope this brings a smile to your face!
+  - image: https://i.pinimg.com/564x/a5/5b/07/a55b0729933e2f8822ff775b46b7e8bc.jpg
+    text: Be the reason someone smiles today.
+  - image: https://i.pinimg.com/564x/44/6d/60/446d60ffb464c8a8dbe23e38d0a526a5.jpg
+    text: Difficult roads often lead to beautiful destinations.
+  - image: https://i.pinimg.com/564x/cc/1d/88/cc1d88972e63680ca0f92ad9f4e3427f.jpg
+    text: Believe you can and you're halfway there.
+  utter_play:
+  - text: Type 'Snake' 🐍, 'Water'💦  or 'Gun' 🔫 to play.
+  utter_play_again:
+  - text: Do you want play again?
+  utter_dassform:
+  - text: 'Here is the link for Dass21: https://aryaapatel.github.io/-aryaapatel.github.io/latest.html' 
+  utter_sugg_treat:
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          Value yourself 💖 : Treat yourself with kindness and respect, and avoid self-criticism 🙅‍♀. Make time for your hobbies and favorite projects 🎨, or broaden your horizons 🌅. Do a daily crossword puzzle 🧩, plant a garden 🌻, take dance lessons 💃, learn to play an instrument 🎸 or become fluent in another language 🗣. "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          Take care of your body 🏋‍♀: Taking care of yourself physically can improve your mental health 🧘‍♂. Be sure to:
+          Eat nutritious meals 🥗
+          Avoid smoking and vaping-- see Cessation Help 🚭
+          Drink plenty of water 💦
+          Exercise, which helps decrease depression and anxiety and improve moods 🏃‍♀
+          Get enough sleep 😴. Researchers believe that lack of sleep contributes to a high rate of depression in college students. "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          Surround yourself with good people 🤗: People with strong family or social connections are generally healthier than those who lack a support network. Make plans with supportive family members and friends 👨‍👩‍👧‍👦, or seek out activities where you can meet new people, such as a club 🎭, class 📚 or support group 🤝. "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          Give yourself 🤲: Volunteer your time and energy to help someone else. You'll feel good about doing something tangible to help someone in need — and it's a great way to meet new people 🤝.  "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+         Learn how to deal with stress 🧘‍♀: Like it or not, stress is a part of life 😫. Practice good coping skills: Try One-Minute Stress Strategies ⏱, do Tai Chi 🥋, exercise 🏊‍♀, take a nature walk 🌳, play with your pet 🐶 or try journal writing 📝 as a stress reducer. Also, remember to smile 😊 and see the humor in life 😂. Research shows that laughter can boost your immune system, ease pain, relax your body and reduce stress.  "          
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          Quiet your mind 🧘‍♂: Try meditating 🧘, Mindfulness and/or prayer 🙏. Relaxation exercises and prayer can improve your state of mind and outlook on life 🌟. In fact, research shows that meditation may help you feel calm and enhance the effects of therapy. To get connected, see spiritual resources on Personal Well-being for Students  "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          Break up the monotony 🎉: Although our routines make us more efficient and enhance our feelings of security and safety 🚪, a little change of pace can perk up a tedious schedule. Alter your jogging route 🏃‍♀, plan a road-trip 🚗, take a walk in a different park 🌳, hang some new pictures 🖼 or try a new restaurant 🍝. "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          🚫 Avoid alcohol and other drugs: Keep alcohol use to a minimum and avoid other drugs. Sometimes people use alcohol and other drugs to self-medicate but in reality, alcohol and other drugs only aggravate problems. For more information, see Alcohol and Other Drugs.  "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          🆘 Get help when you need it: Seeking help is a sign of strength — not a weakness. And it is important to remember that treatment is effective. People who get appropriate care can recover from mental illness and addiction and lead full, rewarding lives.  "
+
+  - text: "Here is a tip that can help you maintain or improve your mental health: \n \n
+          🎨 Create art: Engage in any form of creative expression such as painting, drawing, or photography. It can be a great way to unwind and express your emotions. \n\n
+          🐶 Spend time with pets: Pets can provide companionship, comfort, and unconditional love. Spend time playing with your furry friend or consider volunteering at a local animal shelter.\n\n
+          🍳 Cook a new recipe: Try cooking a new dish or experimenting with new ingredients. It can be a fun way to explore new flavors and improve your cooking skills. 🍲 \n\n
+          🚶‍♀ Take a mindful walk: Instead of rushing through your walk, take the time to be present and notice your surroundings. Focus on your breath and the sensations in your body. 🧘‍♀ \n\n
+           🎭 Plan play time: 📅 Make time in your schedule to do something fun that you enjoy, whether it's playing a game 🎲 or taking a dance class 💃. It's important to prioritize leisure activities to reduce stress and improve overall well-being."
+  utter_wellness:
+  - text: Hi! It's time for your daily wellness check. Tracking healthy habits is a great way to measure your health. Would you like to answer a few question about your health?
+
+  utter_ask_sleep:
+  - text: How much did you sleep last night?
+  utter_ask_exercise:
+  - text: Did you do any exericse?
+  utter_ask_diet:
+  - text: Did you stick to the healthy diet yesterday?
+  utter_ask_stress:
+  - text: Is your stress level, low, medium, or high?
+  utter_ask_goal:
+  - text: Setting goals - even small ones - is a great way to focus your day. What do you want to accomplish?
+  utter_slots_values:
+  - text: |
+      Here's your daily wellness log:
+       - Exercised?: {confirm_exercise}
+       - Type of exercise: {exercise}
+       - Sleep: {sleep}
+       - Stress level: {stress}
+       - Goal: {goal}
+  #  - Stuck to a healthy diet?: {diet}
+  utter_ask_continue:
+  - text: Sorry, I don't quite understand. Do you want to continue?
+
+actions:
+- action_show_image
+- utter_sad
+- action_disclaimer
+- utter_depressed
+- utter_greet
+- action_log_gratitude
+- action_save_conversation_history
+- action_tell_joke
+- action_emotion
+- action_play_swg
+- action_suggest_psychiatrist
+- utter_ask_exercise
+- utter_ask_sleep
+- utter_slots_values
+- action_submit_results
+- validate_health_form
+- utter_wellness
+entities:
+- choice
+- exercise
+- goals
+- sleep
+- stress
+# - diet
+- goal
+
+slots:
+  choice:
+    type: categorical
+    values:
+    - snake
+    - water
+    - gun
+    mappings:
+    - type: from_entity
+      entity: choice
+  confirm_exercise:
+    type: bool
+    influence_conversation: false
+#    auto_fill: false
+#    initial_value: null
+    mappings:
+    - type: from_intent
+      intent: affirm
+      value: true
+    - type: from_intent
+      intent: deny
+      value: false
+  exercise:
+    type: text
+    influence_conversation: false
+#    auto_fill: false
+#    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: exercise
+      value: "exercise"
+  sleep:
+    type: text
+    influence_conversation: false
+#    auto_fill: false
+#    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: sleep
+      value: "sleep"
+#   diet:
+#     type: text
+#     influence_conversation: false
+# #    auto_fill: false
+# #    initial_value: null
+#     mappings:
+#     - type: from_entity
+#       entity: diet
+#       value: "diet"
+  stress:
+    type: text
+    influence_conversation: false
+#    auto_fill: false
+#    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: stress
+      value: "stress"
+  goal:
+    type: text
+    influence_conversation: false
+#    auto_fill: false
+#    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: goal
+      value: "goal"
+forms:
+  health_form:
+    required_slots:
+    - confirm_exercise
+    - exercise
+    - sleep
+#  - diet
+    - stress
+    - goal
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
