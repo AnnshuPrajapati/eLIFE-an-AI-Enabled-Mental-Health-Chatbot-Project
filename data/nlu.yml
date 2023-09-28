@@ -1,0 +1,630 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - hey there
+    - let's go
+    - hey dude
+    - hii
+    - hiyy
+    - hiya
+    - yo
+    - hieeeeee
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - sure man
+    - ok will follow
+    - ok
+    - ok bye
+    - byt then
+    - ttyl
+    - bbye
+# - intent: support
+#   examples: |
+#     - Could you help me?
+#     - give me a hand please
+#     - Can you help?
+#     - What can you do for me?
+#     - I need support
+#     - I need help
+#     - Support me please
+
+- intent: support
+  examples: |
+    - Could you help me please?
+    - give me a hand please
+    - Can you help me acheive it?
+    - What can you do for me?
+    - I need support to be normal
+    - I need help to regain my personality.
+    - Support me please
+
+- intent: understanding
+  examples: |
+    - You don't understand me.
+    - You're just some robot. How would you know?
+    - You can't possibly know what i'm going through
+    - You're useless
+    - You can't help me
+    - Nobody understands me.
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am soo happy today
+    - i am very happy
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - of course
+    - that sounds good
+    - correct
+    - I appreciate it
+    - That's right
+- intent: done
+  examples: |
+    - That's all.
+    - I don't have anything more to say
+    - Nothing else
+    - That's all i have to say
+    - no, that would be all
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - That's helpful
+    - Thanks for the help
+    - Than you very much
+    - Thanks. I really appreciate it.
+    - good work
+- intent: morning
+  examples: |
+    - goodmorning
+    - good morning
+- intent: name
+  examples: |
+    - My name is
+    - me
+    - I am name
+    - I go by
+    - myself
+- intent: developer
+  examples: |
+    - Who are you
+    - What are you?
+    - Who you are?
+    - Tell me more about yourself
+    - What is your name?
+    - What should I call you?
+    - What's your name?
+    - Tell me about yourself
+- intent: abilities
+  examples: |
+    - What can you do?
+    - What u do?
+    - What are you capable of
+    - What can u provide
+    - can I trust you
+- intent: privacy
+  examples: |
+    - Will my info be leaked
+    - will u share it with others
+    - what about my privacy
+    - privacy concerns
+    - u record my conversations
+    - disclose my chats
+- intent: unique_qualities
+  examples: |
+    - how are you different from others
+    - what are ur unique features
+    - what do u offer more than others
+    - ur unique features
+    - unique qualities
+    - what are ur unique qualities?
+- intent: afternoon
+  examples: |
+    - Good Afternoon
+    - good afternoon
+- intent: user-advice
+  examples: |
+    - I want some advice.
+    - I need some advice.
+    - I need advice on something.
+- intent: default
+  examples: |
+    - exams
+    - relationship
+    - boyfriend
+    - girlfriend
+    - family
+    - money
+    - financial problems
+- intent: faq-1
+  examples: |
+    - What is mental health?
+    - Define Mental Health
+    - What does it mean to have a mental illness?
+- intent: wrong
+  examples: |
+    - What are you saying?
+    - That doesn't make sense
+    - Wrong response
+    - Wrong answer
+- intent: something-else
+  examples: |
+    - I want to talk about something else
+    - Let's talk about something else.
+    - Can we not talk about this?
+
+- intent: faq-19
+  examples: |
+    - What do I do if I'm worried about my mental health?
+    - How do I know if I need to seek professional help for my mental health?
+- intent: scared
+  examples: |
+    - I'm scared.
+    - That sounds awful. What do I do?
+    - No, I don't want to feel this way.
+    - I am scared for myself.
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+- intent: night
+  examples: |
+    - good night
+    - Goodnight
+    - goodnight
+- intent: stressed
+  examples: |
+    - I am so stressed out
+    - I am so stressed
+    - I feel stuck
+    - I still feel stressed
+    - I am so burned out
+    - I'm feeling really stressed right now.
+    - I have a lot going on and I'm feeling really overwhelmed.
+    - I feel like I'm drowning in work and it's stressing me out.
+    - I can't seem to relax and I'm always feeling on edge.
+    - I've been feeling really stressed lately and I don't know how to cope.
+    - Everything feels like it's piling up and it's causing me a lot of stress.
+    - I'm finding it hard to focus and I'm feeling really stressed about it.
+    - I feel like I'm carrying the weight of the world on my shoulders and it's stressing me out.
+# - intent: understanding
+#   examples: |
+#     - You don't understand me.
+#     - You're just some robot. How would you know?
+#     - You can't possibly know what i'm going through
+#     - You're useless
+#     - You can't help me
+#     - Nobody understands me.
+- intent: sleep
+  examples: |
+    - I have insomnia.
+    - I am suffering from insomnia.
+    - I can't sleep.
+    - I haven't slept for the last few days.
+    - I can't seem to go to sleep.
+    - I haven't had proper sleep for the past few days.
+- intent: str_info
+  examples: |
+    - What are some common causes of stress?
+    - How does stress affect the body?
+    - Can you explain the science behind stress?
+    - Can stress cause mental health issues?
+    - How does stress impact mental health?
+    - What are some ways to improve mental health while dealing with stress?
+- intent: model_efficieny
+  examples: |
+    - how much is this efficient
+    - is the model relevant and efficient
+    - is this true ? should i believe him
+    - should i trust the information by you
+    - how precise is the information you provide
+- intent: faq-7
+  examples: |
+    - What is therapy?
+    - Do I need therapy?
+    - Who is therapy for?
+- intent: stupid
+  examples: |
+    - Are you stupid?
+    - You're crazy
+    - You are dumb
+    - Are you dumb?
+- intent: no_response
+  examples: |
+    - i don't want to talk
+- intent: not_talking
+  examples: |
+    - I don't want to disuss it.
+    - No just stay away.
+    - I can't bring myself to open up.
+    - Just shut up
+    - stop it
+    - its enough
+    - shut up
+    - go to hell
+- intent: anxious
+  examples: |
+    - I feel so anxious.
+    - I'm so anxious because of .
+    - I'm feeling really anxious right now and I don't know how to calm down.
+    - I have this constant feeling of dread and it's making me really anxious.
+    - I can't stop worrying about things and it's causing me a lot of anxiety.
+    - I feel like I'm always on edge and it's making me anxious all the time.
+    - I'm scared to do anything because I'm so anxious about what might happen.
+    - My heart is racing and I'm having trouble catching my breath. I think I'm having an anxiety attack.
+    - I'm so anxious about everything that I can't sleep at night.
+    - I'm really anxious about talking to people and it's making it hard for me to go out in public.
+- intent: anx_info
+  examples: |
+    - What are the symptoms of anxiety?
+    - How can I tell if I have anxiety?
+    - What are the physical symptoms of anxiety?
+    - Can you tell me more about anxiety symptoms?
+    - Can you suggest some ways to deal with anxiety?
+    - What are the common causes of anxiety?
+    - I think, i have an anxiety attack.
+- intent: anxiety_treat
+  examples: |
+    - How can I get help for anxiety?
+    - Can you recommend a therapist for anxiety?
+    - Where can I find resources for managing anxiety?
+    - What are some effective treatments for anxiety?
+- intent: hate-you
+  examples: |
+    - I hate you.
+    - I don't like you.
+    - I don't trust you.
+- intent: antisoc
+  examples: |
+    - I hate going to parties because there are so many people.
+    - I get really anxious in crowded places like malls or concerts.
+    - I try to avoid large social gatherings because they make me uncomfortable.
+    - I feel like I'm suffocating when I'm in a big crowd.
+    - I don't want to talk other than my close friends.
+    - I feel very uncomfortable when surrounded by lot of people
+    - I want to be alone
+    - I don't want to anywhere
+    - i don't want to talk with anyone
+- intent: faq-5
+  examples: |
+    - How do I know if I have depression?
+    - Am I depressed?
+    - Am I suffering from depression?
+    - Am I mentally ill?
+- intent: repeat
+  examples: |
+    - You mentioned that already.
+    - Why are you repeating yourself?
+- intent: no_friends
+  examples: |
+    - I don't have any friends
+    - Can genetics play a role in mental health problems?
+- intent: faq-18
+  examples: |
+    - What causes mental health problems?
+    - What is the impact of societal and environmental factors on mental health?
+- intent: dass21_info
+  examples: |
+    - What's the dass21?
+    - Can you explain what the DASS-21 assessment is?
+- intent: worthless
+  examples: |
+    - I feel so worthless
+    - No one likes me
+    - I can't do anything
+    - I am so useless
+    - Nothing makes sense anymore
+    - I feel worthless and like I can't do anything right.
+    - Sometimes I wonder what the point of everything is. I feel worthless.
+    - I'm struggling with my self-worth and feeling like I'm not good enough.
+    - I feel like I'm a burden to everyone and that makes me feel worthless.
+    - I can't seem to shake this feeling of worthlessness and it's really getting me down.
+    - I feel like I don't contribute anything meaningful and that makes me feel worthless.
+    - No matter what I do, I can't seem to feel like I'm worth anything.
+    - I feel like a failure and that makes me feel worthless.
+- intent: suicide
+  examples: |
+    - I want to kill myself.
+    - I've thought about killing myself.
+    - I want to die.
+    - I am going to kill myself.
+    - I am going to commit suicide.
+- intent: worried
+  examples: |
+    - I'm feeling really worried about my job.
+    - I'm worried that I won't be able to pay my rent this month.
+    - I'm so worried about my upcoming exams.
+    - I'm really worried about my health.
+    - I'm feeling worried about my [relationship]() with my partner.
+    - I'm worried that I'm not making the right choices in my life.
+    - I'm worried that I'm not living up to my own expectations.
+    - I'm worried that something bad is going to happen.
+    - I'm feeling really anxious and worried lately.
+- intent: depr_sym
+  examples: |
+    - I feel really sad all the time.
+    - I'm struggling to find joy in things I used to enjoy.
+    - I'm having trouble sleeping and I'm always tired.
+    - I don't feel like I can talk to anyone about how I'm feeling.
+    - I'm having thoughts of self-harm.
+    - I can't concentrate in my work or anything else
+    - I am very hopelessness about the future
+    - I am very feeling very tired or low in energy.
+    - I don't want to eat
+    - feelings of excessive guilt or low self-worth
+- intent: depr_info
+  examples: |
+    - What are the symptoms of depression?
+    - How can I tell if I have depression?
+    - What are the physical symptoms of depression?
+    - Can you tell me more about depression symptoms?
+    - Can you suggest some ways to deal with depression?
+    - What are the common causes of depression?
+    - I think, i have an  attack.
+- intent: meditation
+  examples: |
+    - hmmm that sounds like it could be useful to me.
+    - That sounds useful.
+    - I'm interested in learning more about meditation and how it can help with stress.
+    - I've been trying to meditate but I'm not sure if I'm doing it right.
+    - I'm looking for a guided meditation that I can do to help me relax.
+    - I've heard that meditation can help with anxiety and I'm curious to try it.
+    - I want to start a daily meditation practice but I don't know where to begin.
+    - I'm interested in learning about different types of meditation and their benefits.
+    - I'm looking for a meditation app that can help me establish a regular practice.
+    - I've tried meditation before but I can't seem to quiet my mind. Do you have any tips?
+- intent: faq-15
+  examples: |
+    - What treatment options are available?
+    - What types of therapy are available for mental health treatment?
+- intent: faq-6
+  examples: |
+    - What is a therapist?
+    - What does a therapist do?
+- intent: depressed
+  examples: |
+    - I can't take it anymore
+    - I am so depressed
+    - I think i'm depressed.
+    - I have depression
+- intent: faq-14
+  examples: |
+    - How can I find a mental health professional for myself or my child?
+    - Are there any online mental health services available?
+- intent: family_history
+  examples: |
+    - My dad has struggled with depression and I'm worried that I might also be at risk.
+    - My grandmother had Alzheimer's and I'm concerned that I might be more likely to develop it too.
+    - There is a history of mental illness in my family and I'm worried that I might be affected too.
+    - My family has a history of high blood pressure and I'm concerned that I might have it too.
+- intent: faq-13
+  examples: |
+    - What should I do if I know someone who appears to have the symptoms of a mental disorder?
+    - How do I approach someone who I suspect is struggling with a mental disorder?
+- intent: faq-12
+  examples: |
+    - Can people with mental illness recover?
+    - What does recovery from mental illness look like?
+- intent: faq-20
+  examples: |
+    - What's the difference between anxiety and stress?
+    - How is anxiety different from stress?
+- intent: faq-21
+  examples: |
+    - What's the difference between sadness and depression?
+    - difference between sadness and depression
+- intent: evening
+  examples: |
+    - goodevening
+    - good evening
+- intent: faq-9
+  examples: |
+    - Who does mental illness affect?
+    - Can children have a mental illness?
+- intent: faq-11
+  examples: |
+    - What are some of the warning signs of mental illness?
+    - What does mental illness look like?
+    - How should I know that I have mental
+- intent: depr_treat
+  examples: |
+    - How is depression typically treated?
+    - What are some ways to manage symptoms of depression?
+    - where can I find the treatment for depression?
+    - Are there available online resources to cure depression?
+- intent: log_gratitude
+  examples: |
+    - I am grateful for the beautiful sunrise this morning.
+    - Today, I am thankful for my health.
+    - I feel grateful for the support of my friends and family.
+- intent: tell_joke
+  examples: |
+    - I am bored , can you laugh me
+    - can you tell me a joke
+    - tell a joke
+    - joke
+- intent: emotion
+  examples: |
+    - I dont know what i am feeling
+    - my emotions are wavering
+    - I want to know more about myself
+    - I want to recover
+    - i want to take control of myself
+    - i am feeling really anxious and stressed
+    - I just don't see the point in anything anymore.
+    - I'm so tired all the time.
+    - I feel like a burden to everyone around me.
+    - Nothing brings me joy anymore.
+    - I can't concentrate on anything.
+    - I'm worthless and nobody cares about me.
+    - I just want to be left alone.
+    - I can't handle all of this pressure.
+    - There's just too much going on right now.
+    - I feel like I'm drowning in responsibilities.
+    - I'm so overwhelmed and I don't know what to do.
+    - I feel like I'm on edge all the time.
+    - I can't catch my breath.
+    - My heart is racing and I feel like I'm going to pass out.
+    - I'm sweating and shaking.
+    - I feel like I'm going to die.
+    - I need to leave this situation right now.
+    - I can't stop these racing thoughts.
+    - I feel like I'm constantly failing.
+    - I just want to sleep all day.
+    - I don't see the point in anything.
+    - I feel like I'm in a dark hole that I can't get out of.
+    - I feel so alone, even when I'm around other people.
+    - I'm not worth anyone's time or attention.
+    - I'm just so tired of everything.
+    - I don't want to burden anyone with my problems.
+- intent: inform
+  examples: |
+    - [snake](choice)
+    - [water](choice)
+    - [gun](choice)
+- intent: play
+  examples: |
+    - I want to play
+    - Let's Play
+- intent: psy data
+  examples: |
+    - i want to know about available Psychatrist in Ahmedabad
+    - Please, suggest me some Psychatrist available
+    - can you suggest me Psychatrist?
+- intent: dassform
+  examples: |
+    - i want to know about my dasscore.
+    - i want to take dass21 questionary.
+    - dass21 form.
+    - i want to fill dass21 form.
+
+- intent: sugg_treat
+  examples: |
+    - can you suggest me treatments?
+    - pls suggest some treatments to cure mental disorder
+    - suggest effective treatments
+    - can you suggest me treatments to improve mental health.
+    - suggest me a tip to improve myself.
+    - suggest me a tip.
+
+- intent: informal
+  examples: |
+    - a full [8 hours](sleep)
+    - only [four hours](sleep)
+    - about [6 hour](sleep)
+    - [low](stress)
+    - [medium](stress)
+    - [high](stress)
+    - i went for a [run](exercise)
+    - yes, I went for a [ran](exercise)
+    - uh huh an hour of [yoga](exercise)
+    - yep, I went for a [hike](exercise)
+    - yes, I tool the dog for a [walk](exercise)
+    - yeah, I played [tennis](exercise)
+    - I went [swimming](exercise)
+    - took a [spin class](exercise)
+    - did some [boxing](exercise)
+    - played some [basketball](exercise)
+    - played [football](exercise)
+    - I did a [workout](exercise)
+    - [rock climbing](exercise)
+    - I want to get up early and go for a run
+    - be more patient with my family
+    - try to be a better friend
+    - make sure to eat better tomorrow
+    - eat less junk food
+    - eat better
+    - spend less time on my phone
+    - don't procrastinate
+    - go to bed earlier
+    - don't stay up so late
+    - try to make some time to meditate
+    - I ate pretty healthy overall
+    - lots of fruits and vegetables
+    - I ate a [salad] (diet)
+    - too many [snacks] (diet)
+    - too many sweets
+    - a lot of carbs
+    - too much fatty food
+    - get more exercise
+    - i slept for [10 hours](sleep)
+    - very [low](stress)
+    - i want to maintain [fit body](goal)
+    - i want to start [eating health diet](goal)
+- intent: out_of_scope
+  examples: |
+    - that's not what i want to do
+    - wait stop
+    - you are no help
+    - this is no help at all
+    - how old are you
+    - I want to order a pizza
+    - tell me the weather
+    - this isn't working
+    - none of your business
+    - I don't want to tell you that
+    - that's not right
+    - stop asking
+    - nevermind
+    - I want to do something else
+    - I changed my mind
+
+- intent: wellness
+  examples: |
+    - want to take self asses of my wellness
+    - asses my wellness

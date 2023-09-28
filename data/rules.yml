@@ -1,0 +1,70 @@
+version: "3.1"
+
+rules:
+- rule: handle greet intent
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_disclaimer 
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+- rule: tell joke
+  steps:
+  - intent: tell_joke
+  - action: action_tell_joke
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallsituation
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: detect_emotion #take
+  steps:
+    - intent: emotion
+    - action: action_emotion 
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+    - intent: nlu_fallback
+    - action: utter_fallsituation
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+    - action: action_save_conversation_history
+
+- rule: Say unique features
+  steps:
+    - intent: unique_qualities
+    - action: action_show_image
+
+- rule: Dass21 form fill
+  steps:
+    - intent: dassform
+    - action: utter_dassform
+
+- rule: suggesting treatments to improve themselves
+  steps:
+    - intent: sugg_treat
+    - action: utter_sugg_treat
+    
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: health_form
+  steps:
+  - action: health_form
+  - active_loop: null
+  # The action we want to run when the form is submitted.
+  - action: action_submit_results
+  - action: utter_slots_values

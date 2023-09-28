@@ -1,0 +1,505 @@
+version: "3.1"
+
+stories:
+  - story: greet+support+mood_happy+done+thanks  #1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: support
+    - action: utter_support
+    - intent: mood_great
+    - action: utter_happy
+    - intent: affirm
+    - action: utter_affirm
+    - intent: done
+    - action: utter_done
+    - intent: thanks
+    - action: utter_thanks
+    - action: action_save_conversation_history
+
+  - story: happy+name+devloper+abilities+privacy+unique_qualities+bot_challenge+affirm+done #2
+    steps:
+    - intent: morning
+    - action: utter_morning
+    - action: action_disclaimer   
+    - intent: mood_great
+    - action: utter_happy
+    - intent: name
+    - action: utter_name
+    - intent: developer
+    - action: utter_devop
+    - intent: abilities
+    - action: utter_abilities
+    - intent: privacy
+    - action: utter_privacy
+    - intent: unique_qualities
+    - action: action_show_image
+    - intent: bot_challenge
+    - action: utter_iamabot
+    #- action: utter_did_that_help
+    - intent: done
+    - action: utter_done
+    - action: action_save_conversation_history
+
+  - story: happy+user'sadvice+default+some faqs and wrong repsonses + denial + scaared+ done+ thnaks #3
+    steps:
+    - intent: afternoon
+    - action: utter_afternoon
+    - action: action_disclaimer   
+    - intent: mood_great
+    - action: utter_happy
+    - intent: user-advice
+    - action: utter_advice
+    - intent: default
+    - action: utter_default
+    - intent: faq-1
+    - action: utter_faq-1
+    - intent: wrong
+    - action: utter_wrong
+    - intent: something-else
+    - action: utter_something-else
+    - intent: faq-19
+    - action: utter_faq-19
+   #g - action: utter_did_that_help
+    - intent: scared
+    - action: utter_scared
+    - intent: deny
+    - action: utter_deny
+    - intent: done
+    - action: utter_done
+    - intent: thanks
+    - action: utter_thanks
+    - action: action_save_conversation_history
+
+  - story: unhappy+name+devloper+abilities+privacy+unique_qualities+bot_challenge+affirm   #4
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: mood_unhappy
+    - action: utter_sad
+    - intent: name
+    - action: utter_name
+    - intent: developer
+    - action: utter_devop
+    - intent: abilities
+    - action: utter_abilities
+    - intent: privacy
+    - action: utter_privacy
+    - intent: unique_qualities
+    - action: action_show_image
+    - intent: bot_challenge
+    - action: utter_iamabot
+   #  - action: utter_did_that_help
+    - intent: done
+    - action: utter_done
+    - action: action_save_conversation_history
+
+  - story: mood unhappy + stressed + advice  #5
+    steps:
+    - intent: night
+    - action: utter_night
+    - action: action_disclaimer   
+    - intent: stressed
+    - action: utter_stressed
+    - action: utter_did_that_help
+    - intent: understanding
+    - action: utter_understanding
+    - intent: sleep
+    - action: utter_sleep
+    - intent: str_info
+    - action: utter_str_info
+    #suggestion of dass-21 questionnaire
+    - intent: model_efficieny
+    - action: utter_model_efficieny
+    - action: utter_did_that_help
+    - intent: scared
+    - action: utter_scared
+    - intent: repeat
+    - action: utter_repeat
+    - intent: faq-7
+    - action: utter_faq-7
+    - intent: stupid
+    - action: utter_stupid
+    - intent: no_response
+    - action: utter_no_response
+    - intent: not_talking
+    - action: utter_not_talking
+    - action: action_save_conversation_history
+
+  - story: night+ unhappy + anxious and all related information+  #6
+    steps:
+    - intent: night
+    - action: utter_night
+    - action: action_disclaimer   
+    - intent: mood_unhappy
+    - action: utter_sad
+    - intent: anxious
+    - action: utter_anxious
+    - intent: anx_info
+    - action: utter_anx_info
+    - intent: anxiety_treat
+      # anxiety treatment diff
+    - action: utter_anxiety_treat
+    - intent: hate-you
+    - action: utter_hate-you
+    - intent: not_talking
+    - action: utter_not_talking
+      # want to know more about your personality. Incase i can help you
+    - intent: antisoc
+    - action: utter_antisoc
+    - action: utter_did_that_help
+    - intent: something-else
+    - action: utter_something-else
+    - intent: faq-5
+    - action: utter_faq-5
+    - intent: faq-7
+    - action: utter_faq-7
+    - intent: thanks
+    - action: utter_thanks
+    - action: action_save_conversation_history
+
+  - story: greet+unhappy+faq1+stressed+something-else+no_friends+affirm+did that help you+thanks  #7
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: mood_unhappy
+    - action: utter_sad
+    - intent: faq-1
+    - action: utter_faq-1
+    - intent: stressed
+    - action: utter_stressed
+    - intent: something-else
+    - action: utter_something-else
+    - intent: no_friends
+    - action: utter_no_friends
+    - intent: affirm
+    - action: utter_affirm
+    - action: utter_did_that_help
+    - intent: thanks
+    - action: utter_thanks
+    - action: action_save_conversation_history
+
+  - story: faq-19+no_friends+faq-18+dass21_info+affirm+utter_did_that_help+thanks  #8
+    steps: 
+    - intent: faq-19 
+    - action: utter_faq-19
+    - action: action_disclaimer   
+    - intent: no_friends
+    - action: utter_no_friends
+    - intent: faq-18
+    - action: utter_faq-18
+    - intent: faq-19
+    - action: utter_faq-19
+    #- intent: DASS21
+    #- action: # for dass21
+    - intent: dass21_info
+    - action: utter_dass21_info
+    - intent: affirm
+    - action: utter_affirm
+    - action: utter_did_that_help
+    - intent: thanks
+    - action: utter_thanks
+    - action: action_save_conversation_history
+
+  - story: faq-5+ user-advice+scared+understanding+utter_did_that_help #9
+    steps: 
+    - intent: faq-5
+    - action: utter_faq-5
+    - action: action_disclaimer   
+    - intent: user-advice
+    - action: utter_advice
+    - intent: scared
+    - action: utter_scared
+    - intent: understanding
+    - action: utter_understanding
+    #- intent: DASS21
+    #- action: # for dass21
+    - action: utter_did_that_help
+    - intent: thanks
+    - action: utter_thanks
+    - action: action_save_conversation_history
+
+  - story: night+ unhappy + suicide so try to change his/her mood  #10
+    steps:
+    - intent: night
+    - action: utter_night
+    - action: action_disclaimer   
+    - intent: mood_unhappy
+    - action: utter_sad
+    - intent: worthless
+    - action: utter_worthless
+    - intent: suicide
+    - action: utter_suicide 
+    - intent: something-else
+    - action: utter_something-else
+    - intent: hate-you
+    - action: utter_hate-you
+    - intent: not_talking
+    - action: utter_not_talking
+    - intent: worried
+    - action: utter_worried
+    - action: utter_did_that_help
+  # - intent: request_games
+  # - action: #action for game
+    - intent: thanks
+    - action: utter_thanks 
+    - action: action_save_conversation_history
+
+  - story: greet+privacy+no_response+not_talking+scared+default+support+utter_did_that_help+goodbye  #11
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: privacy
+    - action: utter_privacy
+    - intent: no_response
+    - action: utter_no_response
+    - intent: not_talking
+    - action: utter_not_talking
+    - intent: scared
+    - action: utter_scared
+    - intent: default
+    - action: utter_default
+    - intent: support
+    - action: utter_support
+    #- intent: DASS21
+    #- action: # for dass21
+    - action: utter_did_that_help
+    - intent: goodbye 
+    - action: utter_goodbye
+    - action: action_save_conversation_history
+
+  - story:  greet+depr_sym+user-advice+depr_info+ sleep+ meditation+utter_did_that_help_+deny+faq-8+faq-15+utter_did_that_help+goodbye #12
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: depr_sym
+    - action: utter_depr_sym
+    - intent: user-advice
+    - action: utter_advice
+    - intent: depr_info 
+    - action: utter_depr_info
+    - intent: sleep
+    - action: utter_sleep 
+    - intent: meditation
+    - action: utter_meditation
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_deny
+  # - intent: DASS21
+  #- action: # for dass21
+    - intent: faq-1
+    - action: utter_faq-1
+    - intent: faq-15
+    - action: utter_faq-15
+    - intent: faq-6
+    - action: utter_faq-6
+    - action: utter_did_that_help
+    - intent: goodbye 
+    - action: utter_goodbye
+    - action: action_save_conversation_history
+    
+
+  - story:  greet+name+worthless+ unhappy+depression+lack of family support+ advice+ treatments  #13
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: name
+    - action: utter_name
+    - intent: worthless
+    - action: utter_worthless
+    - intent: mood_unhappy
+    - action: utter_sad
+    - intent: depressed
+    - action: utter_depressed
+    - intent: depr_sym
+    - action: utter_depr_sym
+    - intent: family_history
+    - action: utter_ family_history
+    # DASS-21 questionnaire
+    - intent: faq-6
+    - action: utter_faq-6
+    - intent: faq-14
+    - action: utter_faq-14
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_affirm
+    - intent: done
+    - action: utter_done
+    - action: action_save_conversation_history
+
+
+  - story: FAQ-13+ DASS-21 QUESTIONAIRE+ PRIVACY+ ACCURACY+ FAQ-19+ SLEEP+ FAQ-20 AND 21+ scared+faq-12+affirm+goodbye. #14
+    steps:
+    - intent: greet
+    - action: utter_greet 
+    - action: action_disclaimer   
+    - intent: faq-13
+    - action: utter_faq-13
+      # dass questionnaire 
+    - intent: privacy
+    - action: utter_privacy
+    # - intent: accuracy
+    # - action: utter_accuracy
+    - intent: faq-19
+    - action: utter_faq-19
+    - intent: support
+    - action: utter_support
+    - intent: faq-12
+    - action: utter_faq-12
+    - intent: affirm
+    - action: utter_affirm
+    - intent: faq-20
+    - action: utter_faq-20
+    - intent: faq-21
+    - action: utter_faq-21
+    - intent: goodbye
+    - action: utter_goodbye
+    - action: action_save_conversation_history
+
+ # user who asks about his mental health and he is suffering from depression and talks out meditation
+  - story: greet+ user-advice+ faq-8,9,10,15,faq-5, wrong, something else, meditation, faq-17 #15
+    steps:
+    - intent: evening
+    - action: utter_evening
+    - action: action_disclaimer   
+    - intent: user-advice
+    - action: utter_advice
+    - intent: faq-1
+    - action: utter_faq-1
+    - intent: faq-9
+    - action: utter_faq-9
+    - intent: repeat
+    - action: utter_repeat
+    - intent: faq-11
+    - action: utter_faq-11
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_affirm
+      ##DASS-21 questionnaire
+    - intent: faq-5
+    - action: utter_faq-5
+    - intent: wrong
+    - action: utter_wrong
+    - intent: something-else
+    - action: utter_something-else
+    - intent: meditation
+    - action: utter_meditation
+    - intent: depr_treat
+    - action: utter_depr_treat
+    - intent: not_talking
+    - action: utter_not_talking
+    - intent: done
+    - action: utter_done
+    - action: action_save_conversation_history
+
+  - story: Log gratitude # 16
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: log_gratitude
+    - action: action_log_gratitude
+
+  # - story: Save conversation history #17
+  #   steps:
+  #   - intent: done
+  #   - action: utter_done
+  #   - action: action_save_conversation_history
+
+  # - story: Save conversation history #18
+  #   steps:
+  #   - intent: thanks
+  #   - action: action_save_conversation_history
+
+  - story: joke. #19
+    steps:
+    - intent: tell_joke
+    - action: action_tell_joke
+
+  - story: cheer up #20
+    steps:
+#    - intent: greet
+#    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_affirm
+
+  - story: greet+ emotion recogniztion  #21
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - action: action_disclaimer   
+    - intent: emotion
+    - action: action_emotion
+
+  - story: play Snake Water Gun #22
+    steps:
+    - intent: play
+    - action: utter_play
+    - intent: inform
+    - action: action_play_swg
+    - action: utter_play_again
+
+  - story: play again #23
+    steps:
+    - action: utter_play_again
+    - intent: affirm
+    - action: utter_play
+
+  - story: don't play again #24
+    steps:
+    - action: utter_play_again
+    - intent: goodbye
+    - action: utter_goodbye
+    - action: action_save_conversation_history
+
+
+  - story: Psy data
+    steps:
+    - intent: psy data
+    - action: action_suggest_psychiatrist
+
+  - story: interactive_story_1
+    steps:
+    - intent: unique_qualities
+    - action: action_show_image
+
+  - story: Dass21 form fill
+    steps:
+    - intent: dassform
+    - action: utter_dassform
+
+  - story: suggesting treatments to improve themselves
+    steps:
+    - intent: sugg_treat
+    - action: utter_sugg_treat
+    
+  - story: survey happy path
+    steps:
+    - intent: wellness
+    - action: utter_wellness
+    - intent: affirm
+    - action: health_form
+    - active_loop: health_form
+
+  - story: survey stop
+    steps:
+    - intent: wellness
+    - action: utter_wellness
+    - intent: affirm
+    - action: health_form
+    - active_loop: health_form
+    - intent: out_of_scope
+    - action: utter_ask_continue
+    - intent: deny
+    - action: action_deactivate_loop
+    - active_loop : null
+    - action: utter_goodbye
